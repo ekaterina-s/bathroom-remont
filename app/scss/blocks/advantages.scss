@@ -1,0 +1,123 @@
+.advantages {
+    padding: 89px 126px 42px 126px;
+    margin: 0 88px 150px 88px;
+    background-color: rgba($cream, 0.18);
+    border-radius: 0 0 32px 32px;
+
+    @include tablet {
+        padding: 77px 15px 28px 15px;
+        // padding-bottom: 28px;
+        margin: 0;
+        margin-bottom: 80px;
+    }
+}
+
+.advantages__head {
+    padding: 0;
+    padding-bottom: 40px;
+    margin: 0;
+    font: 17px/22px $third-font;
+    color: $brown-3;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    @include tablet {
+        font: 13px/17px $third-font;
+        padding-bottom: 34px;
+        letter-spacing: 0.04em;
+    }
+}
+
+.advantages__text {
+    padding: 0;
+    padding-bottom: 70px;
+    margin: 0;
+    margin-bottom: 70px;
+    border-bottom: 1px solid $brown-3;
+
+    @include tablet {
+        width: 300px;
+        padding-bottom: 39px;
+        margin-bottom: 33px;
+    }
+}
+
+.advantages__list {
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 5px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include tablet {
+        padding-bottom: 18px;
+    }
+}
+
+.advantages__item:not(.advantages__item:nth-child(3), .advantages__item:last-child) {
+    @include tablet {
+        margin-bottom: 31px;
+    }
+}
+
+.advantages__title {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 18px;
+
+    @include tablet {
+        padding-bottom: 15px;
+    }
+}
+
+.advantages__description {
+    margin: 0;
+    padding: 0;
+    font: 18px/27px $third-font;
+    color: $black-2;
+    letter-spacing: 0.01em;
+    max-width: 173px;
+
+    @include tablet {
+        font: 13px/20px $third-font;
+        max-width: 129px;
+    }
+}
+
+.advantages__description--bold {
+    font: 900 18px/27px $third-font;
+
+    @include tablet {
+        font: 900 13px/20px $third-font;
+    }
+}
+
+.advantages__link {
+    display: block;
+    font: 24px/36px $third-font;
+    text-decoration: none;
+    color: $yellow;
+
+    @include tablet {
+        font: 11px/17px $third-font;
+        text-align: center;
+    }
+
+    &:active {
+        text-decoration-line: underline;
+    }
+}
+
+.advantages__request {
+    width: 45px;
+    height: 21px;
+    cursor: pointer;
+    margin-left: 15px;
+
+    @include tablet {
+        width: 14px;
+        height: 8px;
+    }
+}

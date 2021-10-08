@@ -1,0 +1,130 @@
+.price {
+    padding: 0 215px 110px 215px;
+
+    @include tablet {
+        padding: 0 15px 80px 15px;
+    }
+}
+
+.price__head {
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0;
+    margin-bottom: 121px;
+    text-align: center;
+    border-bottom: 1px solid $brown-3;
+    position: relative;
+
+    @include tablet {
+        text-align: left;
+        padding-bottom: 8px;
+        margin-bottom: 50px;
+    }
+}
+
+.price__head::before {
+    position: absolute;
+    content: "";
+    background: url("../../img/rouble.svg") no-repeat 0 0;
+    width: 272px;
+    height: 297px;
+    top: -65px;
+    left: -130px;
+
+    @include tablet {
+        background: url("../../img/rouble_mobile.svg") no-repeat 0 0;
+        width: 122px;
+        height: 133px;
+        top: -26px;
+        left: -15px;
+    }
+}
+
+.price__table {
+    display: grid;
+    grid-template-columns: repeat(2, 469px);
+    column-gap: 131px;
+    row-gap: 54px;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.price__column:nth-child(2),
+.price__column:nth-child(3),
+.price__column:nth-child(4) {
+    @include tablet {
+        transform: translateY(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+        overflow-y: auto;
+    }
+}
+
+.price__pagination {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 128px 0 125px;
+}
+
+.price__toggle {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $cream-6;
+    border: none;
+
+    .__active {
+        background-color: $brown-4;
+    }
+}
+
+.price__title {
+    padding: 0;
+    padding-bottom: 27px;
+    margin: 0;
+
+    @include tablet {
+        padding-bottom: 38px;
+    }
+}
+
+.price__service-price {
+    display: grid;
+    grid-template-columns: 269px 122px;
+    column-gap: 26px;
+    padding-left: 8px;
+
+    @include tablet {
+        grid-template-columns: 162px 88px;
+        column-gap: 48px;
+        padding: 0;
+    }
+}
+
+.price__service,
+.price__price {
+    padding: 0;
+    margin: 0;
+    font: 18px / 27px $third-font;
+    letter-spacing: 0.01em;
+    color: $black-2;
+    padding-bottom: 21px;
+
+    @include tablet {
+        font: 13px/20px $third-font;
+    }
+}

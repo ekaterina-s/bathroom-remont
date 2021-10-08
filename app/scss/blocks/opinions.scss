@@ -1,0 +1,140 @@
+.opinions {
+    margin-bottom: 150px;
+
+    @include tablet {
+        margin-bottom: 80px;
+    }
+}
+
+.opinions__head {
+    padding: 0;
+    padding-bottom: 12px;
+    margin: 0;
+    margin-bottom: 120px;
+    text-align: center;
+    border-bottom: 1px solid $brown-3;
+
+    @include tablet {
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+    }
+}
+
+.opinions__slider {
+    padding: 0 51px;
+    margin-bottom: 169px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include tablet {
+        padding: 0;
+        margin-bottom: 82px;
+    }
+}
+
+.opinions__figure:first-child,
+.opinions__figure:last-child {
+    display: none;
+}
+
+.opinions__figure {
+    position: relative;
+}
+
+.opinions__figcaption {
+    position: absolute;
+    top: 326px;
+    width: 430px;
+    height: 102px;
+    border-radius: 0px 0px 20px 20px;
+    font: 23px/34px $third-font;
+
+    @include tablet {
+        top: 180px;
+        width: 246px;
+        height: 53px;
+        font: 13px/20px $third-font;
+    }
+}
+
+// .opinions__rest {
+//     display: flex;
+//     position: relative;
+//     background-color: red;
+
+//     @include tablet {
+//         transform: translateY(-100%);
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         transition: transform 0.2s ease, opacity 0.2s ease;
+//         opacity: 0;
+//         pointer-events: none;
+//         z-index: 1;
+//         overflow-y: auto;
+//     }
+// }
+
+.opinions__arrow {
+    position: absolute;
+    width: 15px;
+    height: 37px;
+    top: 183px;
+    left: 522px;
+
+    @include tablet {
+        width: 8px;
+        height: 19px;
+        top: 94px;
+        left: 15px;
+    }
+
+    &:active {
+        width: 24px;
+        height: 45px;
+        box-shadow: 0px 0px 25px $brown-3;
+    }
+}
+
+.opinions__arrow--reverse {
+    transform: rotate(180deg);
+    left: 1064px;
+
+    @include tablet {
+        left: 297px;
+    }
+}
+
+.opinions__pagination {
+    width: 313px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 640px;
+
+    @include tablet {
+        width: 185px;
+        margin: 0 67px;
+    }
+}
+
+.opinions__toggle {
+    width: 41px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $cream-6;
+    border: none;
+
+    .__active {
+        background-color: $brown-4;
+    }
+
+    @include tablet {
+        width: 24px;
+        height: 4px;
+    }
+}

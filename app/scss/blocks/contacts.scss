@@ -1,0 +1,138 @@
+.contacts {
+    padding: 0 214px 150px 0;
+
+    @include tablet {
+        // padding: 54px 29px 23px 29px;
+        // background: linear-gradient(269deg, $cream-2 1.21%, rgba($white, 0.99) 160%),
+        // rgba($cream-3, 0.22);
+        padding: 0;
+        margin-bottom: 80px;
+    }
+}
+
+.contacts__head {
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0;
+    margin-bottom: 49px;
+    padding-left: 293px;
+    text-align: center;
+    border-bottom: 1px solid $brown-3;
+
+    @include tablet {
+       display: none;
+    }
+}
+
+.contacts__container {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(270deg, $cream-2, rgba($white, 0.99) 97%), rgba($cream-3, 0.22);
+    border-radius: 32px;
+    padding: 67px 158px 69px 0;
+
+    @include tablet {
+        display: block;
+        background: linear-gradient(269deg, $cream-2 1.21%, rgba($white, 0.99) 160%),
+        rgba($cream-3, 0.22);
+        padding: 54px 29px 23px 29px;
+        border-radius: 0;
+    }
+}
+
+.contacts__img {
+    margin-right: 101px;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.contacts__subcontainer {
+    padding-top: 10px;
+
+    @include tablet {
+        padding: 0;
+    }
+}
+
+.contacts__schedule {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 7px;
+    font: 18px/27px $third-font;
+    letter-spacing: 0.01em;
+    color: rgba($black-3, 0.7);
+    opacity: 0.4;
+
+    @include tablet {
+        padding-bottom: 26px;
+        font: 15px/23px $third-font;
+    }
+}
+
+.contacts__phone {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    font: 700 25px/30px $main-font;
+    color: $brown-3;
+    letter-spacing: -0.005em;
+
+    @include tablet {
+        padding-bottom: 25px;
+        font: 700 22px/27px $third-font;
+        text-align: center;
+    }
+}
+
+.contacts__email {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    font: 18px/22px $main-font;
+    letter-spacing: -0.005em;
+    color: $brown-3;
+}
+
+.contacts__callback {
+    display: block;
+    text-decoration: none;
+    width: 258px;
+    height: 57px;
+    padding: 15px 36px;
+    font: 900 18px/27px $third-font;
+    border-radius: 100px;
+    margin-bottom: 38px;
+
+    @include tablet {
+        margin-bottom: 23px;
+        padding: 11px 36px;
+    }
+}
+
+.contacts__watsapp {
+    display: block;
+    text-decoration: none;
+    font: 18px/27px $third-font;
+    letter-spacing: 0.01em;
+    color: rgba($black-3, 0.7);
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+        font: 16px/24px $third-font;
+        justify-content: center;
+    }
+}
+
+.contacts__watsapp-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 26px;
+
+    @include tablet {
+        margin-left: 20px;
+    }
+}

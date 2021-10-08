@@ -1,0 +1,68 @@
+.description {
+    padding: 0 215px 165px 215px;
+
+    @include tablet {
+        padding: 0 15px 15px 15px;
+    }
+}
+
+.description__head {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    margin-bottom: 120px;
+    text-align: center;
+    border-bottom: 1px solid $brown-3;
+    position: relative;
+    z-index: -2;
+
+    @include tablet {
+        text-align: left;
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+        width: 165px;
+    }
+}
+
+.description__head::before {
+    position: absolute;
+    content: "";
+    background: url("../../img/commas.svg") no-repeat 0 0;
+    width: 356px;
+    height: 316px;
+    top: 60px;
+    left: -175px;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.description__text {
+    padding: 0;
+    padding-bottom: 46px;
+    margin: 0;
+    font: 20px/30px $third-font;
+    letter-spacing: 0.04em;
+    color: $black-2;
+
+    @include tablet {
+        font: 13px/20px $third-font;
+    }
+}
+
+.description__rest {
+    @include tablet {
+        transform: translateY(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+        overflow-y: auto;
+    }
+}

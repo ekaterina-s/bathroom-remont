@@ -1,0 +1,15 @@
+.phone {
+    display: block;
+    font: 700 19px/23px $main-font;
+    letter-spacing: -0.005em;
+    color: $white;
+    text-decoration: none;
+
+    @include tablet {
+        font: 700 12px/15px $main-font;
+    }
+
+    &._active {
+        display: none;
+    }
+}

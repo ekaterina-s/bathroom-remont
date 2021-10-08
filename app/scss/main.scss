@@ -1,7 +1,35 @@
-@import "variables"; //пишем переменные
+@import "variables";
+@import "mixins.scss";
+@import "reset.scss";
+@import "general.scss";
 
-@import "reset"; //сборс стилей
-@import "fonts"; //подключаем шрифты (локально)
+@import "blocks/header.scss";
+@import "blocks/container.scss";
+@import "blocks/nav.scss";
+@import "blocks/logo.scss";
+@import "blocks/phone.scss";
+@import "blocks/advantages.scss";
+@import "blocks/discount-price.scss";
+@import "blocks/discount-form.scss";
+@import "blocks/services.scss";
+@import "blocks/examples.scss";
+@import "blocks/calculator.scss";
+@import "blocks/calculator-form.scss";
+@import "blocks/materials.scss";
+@import "blocks/additional-services.scss";
+@import "blocks/price.scss";
+@import "blocks/description.scss";
+@import "blocks/opinions.scss";
+@import "blocks/call-form.scss";
+@import "blocks/footer.scss";
+@import "blocks/contacts.scss";
 
-//подключаем БЭМ блоки
-@import "blocks/test";
+.test {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 5;
+}

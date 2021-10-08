@@ -1,0 +1,119 @@
+.header {
+    background: url(../../img/header-background.png) no-repeat top/cover;
+
+    @include tablet {
+        background: url(../../img/header-background_mobile.png) no-repeat top/cover;
+    }
+}
+
+.header__top-panel {
+    background-color: rgba($brown, 0.9);
+    margin-bottom: 174px;
+    padding: 21px 215px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+        background-color: rgba($brown, 0.6);
+        margin-bottom: 115px;
+        padding: 14px;
+    }
+}
+
+.header__top-panel--contacts {
+    margin-bottom: 150px;
+
+    @include tablet {
+        margin-bottom: 68px;
+    }
+}
+
+.header__head {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 18px;
+    font: 700 60px/64px $main-font;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 0.17em;
+    text-align: center;
+
+    @include tablet {
+        font: 700 20px/21px $main-font;
+        padding-bottom: 14px;
+    }
+}
+
+.header__text {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 309px;
+    font: 45px/55px $second-font;
+    color: $white;
+    text-align: center;
+
+    @include tablet {
+        font: 14px/17px $second-font;
+        padding-bottom: 157px;
+    }
+}
+
+.header__toggle {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-color: $brown;
+    cursor: pointer;
+    border: none;
+    z-index: 4;
+
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: transparent;
+    }
+}
+
+.header__toggle::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 16px;
+    width: 27px;
+    height: 2px;
+    background-color: $white;
+    box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
+}
+
+.header__toggle._active {
+    top: 0;
+    right: auto;
+    left: 0;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 33px;
+        right: 20px;
+        width: 36px;
+        height: 2px;
+        background-color: $white;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+        background-color: fade($white, 30%);
+    }
+}

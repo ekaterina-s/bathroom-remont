@@ -1,0 +1,47 @@
+.section-titles {
+    font: 55px/55px $second-font;
+    color: $black;
+
+    @include tablet {
+        font: 25px/25px $second-font;
+    }
+}
+
+.subtitles {
+    font: 40px/40px $second-font;
+    color: $black;
+    @include tablet {
+        font: 25px/25px $second-font;
+    }
+}
+
+.yellow-buttons {
+    box-sizing: border-box;
+    border: 3px solid $yellow;
+    color: $yellow;
+    letter-spacing: 0.01em; 
+    box-shadow: 0 0 37px rgba($yellow, 0.6);
+    background-color: $white;
+
+    &:active {
+        text-decoration-line: underline;
+    }
+}
+
+.figcaptions {
+    letter-spacing: 0.01em;
+    color: $white;
+    background-color: rgba($brown, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 50px 5px rgba($grey-2, 0.1);
+}
+
+.inputs {
+    box-sizing: border-box;
+    letter-spacing: 0.01em;
+    color: rgba($black-2, 0.5);
+    border: none;
+    background-color: $white;
+}

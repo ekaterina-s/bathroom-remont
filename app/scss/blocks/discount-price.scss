@@ -1,0 +1,44 @@
+.discount-price {
+    margin-bottom: 150px;
+    padding: 0 215px;
+    position: relative;
+
+    @include tablet {
+        margin-bottom: 80px;
+        padding: 0;
+    }
+}
+
+.discount-price__head {
+    padding: 0 103px 20px 0;
+    margin: 0;
+    margin-bottom: 95px;
+    border-bottom: 1px solid $brown-3;
+
+    @include tablet {
+        padding: 0 15px 15px 15px;
+        margin-bottom: 50px;
+    }
+}
+
+.discount-price__head--accent {
+    color: $yellow;
+    font: 600 55px/55px $second-font;
+
+    @include tablet {
+        font: 600 25px/25px $second-font;
+    }
+}
+
+.discount-price__img {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 287px;
+    height: 365px;
+    object-fit: cover;
+
+    @include tablet {
+        display: none;
+    }
+}
