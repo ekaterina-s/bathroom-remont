@@ -1,18 +1,29 @@
-.header {
-    background: url(../../img/header-background.png) no-repeat top/cover;
+// .header {
+//     height: 700px;
+
+//     @include tablet {
+//         height: 382px;
+//     }
+// }
+
+.header__rest {
+    margin-bottom: 150px;
+}
+
+.header-index {
+    height: 700px;
+    background: url(../img/header-background.png) no-repeat top/cover;
 
     @include tablet {
-        background: url(../../img/header-background_mobile.png) no-repeat top/cover;
+        background: url(../img/header-background_mobile.png) no-repeat top/cover;
+        height: 382px;
     }
 }
 
 .header__top-panel {
     background-color: rgba($brown, 0.9);
     margin-bottom: 174px;
-    padding: 21px 215px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 21px 0;
 
     @include tablet {
         background-color: rgba($brown, 0.6);
@@ -21,13 +32,19 @@
     }
 }
 
-.header__top-panel--contacts {
-    margin-bottom: 150px;
-
-    @include tablet {
-        margin-bottom: 68px;
-    }
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+// .header__top-panel--contacts {
+//     margin-bottom: 150px;
+
+//     @include tablet {
+//         margin-bottom: 68px;
+//     }
+// }
 
 .header__head {
     margin: 0;
@@ -48,14 +65,13 @@
 .header__text {
     margin: 0;
     padding: 0;
-    padding-bottom: 309px;
     font: 45px/55px $second-font;
     color: $white;
     text-align: center;
 
     @include tablet {
         font: 14px/17px $second-font;
-        padding-bottom: 157px;
+        // padding-bottom: 157px;
     }
 }
 

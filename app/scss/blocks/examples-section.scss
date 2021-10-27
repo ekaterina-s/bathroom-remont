@@ -1,0 +1,107 @@
+.examples-section__head {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+    color: $black;
+    text-align: center;
+}
+
+.examples-section__container {
+    max-width: 1290px;
+}
+
+.examples-section__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+}
+
+.examples-section__item {
+    padding: 65px 60px 60px 60px;
+    box-shadow: 0px 15px 50px 5px rgba($black-3, 0.1);
+    border-radius: 32px;
+    background: linear-gradient(270deg, $cream-2 0%, rgba($white, 0.99) 112.52%), rgba($cream-3, 0.22);
+}
+
+.examples-section__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 64px;
+    font: 40px/40px $second-font;
+    color: $black;
+}
+
+.examples-section__first-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.examples-section__description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-bottom: 34px;
+}
+
+.examples-section__area-number,
+.examples-section__terms-days {
+    font: 900 20px/30px $third-font;
+    letter-spacing: 0.01em;
+    margin-bottom: 5px;
+    color: $black-2;
+    text-align: center;
+}
+
+.examples-section__area-description,
+.examples-section__terms-description {
+    font: 20px/30px $third-font;
+    letter-spacing: 0.01em;
+    margin-bottom: 5px;
+    color: rgba($black-2, 0.7);
+    text-align: center;
+}
+
+.examples-section__second-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 11px;
+}
+
+.examples-section__video-box {
+    position: relative;
+}
+
+.examples-section__video-button {
+    position: absolute;
+    width: 219px;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font: 400 15px/23px $third-font;
+    letter-spacing: 0.01em;
+    color: $white;
+    text-transform: uppercase;
+
+    &:active {
+        text-decoration-line: underline;
+    }
+}
+
+.examples-section__video-button::before {
+    content: " ";
+    background: url(../img/video-icon.svg) no-repeat center center;
+    width: 54px;
+    height: 50px;
+    flex-shrink: 0;
+    margin-right: 13px;
+}

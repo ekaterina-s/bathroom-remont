@@ -1,13 +1,24 @@
 .footer {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $cream-5;
+    // display: flex;
+    // flex-wrap: wrap;
     padding: 117px 129px 120px 263px;
+    // align-items: flex-start;
     // justify-content: space-between;
-    align-items: flex-start;
+    background-color: $cream-5;
 
     @include tablet {
         padding: 40px 28px 56px 15px;
+    }
+}
+
+.footer__container {
+    max-width: 1207px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+        max-width: 320px;
     }
 }
 
@@ -20,11 +31,29 @@
     }
 }
 
-.footer__flex:nth-child(4) {
-    margin-left: 130px;
+.footer__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font: 15px/23px $third-font;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin-right: 55px;
+
+    @include tablet {
+        font: 13px/20px $third-font;
+        margin: 0;
+        width: 50%;
+    }
 }
 
-.footer__title {
+.footer__list:nth-child(3) {
+    @include tablet {
+        display: none;
+    }
+}
+
+.footer__term {
     padding: 0;
     padding-bottom: 35px;
     margin: 0;
@@ -39,27 +68,26 @@
     }
 }
 
-.footer__list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    font: 15px/23px $third-font;
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
+// .footer__item {
+//     padding-bottom: 10px;
+// }
 
-    @include tablet {
-        font: 13px/20px $third-font;
-    }
-}
-
-.footer__item {
-    padding-bottom: 10px;
+.footer__item--lowercase {
+    text-transform: none;
 }
 
 .footer__link {
     text-decoration: none;
     color: rgba($black-3, 0.7);
     padding: 10px 0;
+}
+
+.footer__show-list {
+    display: none;
+
+    @include tablet {
+        order: 3;
+    }
 }
 
 .footer__list--address {
@@ -70,13 +98,10 @@
     padding-bottom: 7px;
 }
 
-.footer__media-list {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer__term--none {
+    @include tablet {
+        display: none;
+    }
 }
 
 .footer__media-link {
@@ -86,4 +111,14 @@
 .footer__media-icon {
     width: 22px;
     height: 22px;
+}
+
+.footer__list--social {
+    margin-left: auto;
+}
+
+.social__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

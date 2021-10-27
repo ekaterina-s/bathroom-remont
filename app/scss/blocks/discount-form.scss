@@ -1,16 +1,40 @@
 .discount-form {
-    padding: 47px 103px 40px 286px;
-    background: linear-gradient(270deg, $cream-2, rgba($white, 0.99) 97%), rgba($cream-3, 0.22);
-    border-radius: 32px;
-    margin-left: 415px;
+    // padding: 47px 103px 40px 286px;
+    // background: linear-gradient(270deg, $cream-2, rgba($white, 0.99) 97%), rgba($cream-3, 0.22);
+    // background: 
+    // url(../../img/bathroom-set_desktop.jpg) no-repeat bottom 64px left / 815px 365px,
+    //     linear-gradient(270deg, $cream-2, rgba($white, 0.99) 97%), rgba($cream-3, 0.22);
+    // border-radius: 32px;
+    // margin-left: 415px;
+    // position: relative;
+
+    // max-width: 1388px;
+    // margin: 0 212px 0 0;
+    // position: relative;
+    // padding: 47px 103px 40px 0;
+    
+    margin-left: 916px;
+
+
 
     @include tablet {
-        padding: 35px 15px 27px 15px;
+        // padding: 35px 15px 27px 15px;
         margin: 0;
-        border-radius: 0;
-        background: linear-gradient(269deg, rgba($cream-2, 1.21%), rgba($white, 0.99) 160%), rgba($cream-3, 0.22);
+        // border-radius: 0;
+        // background: linear-gradient(269deg, rgba($cream-2, 1.21%), rgba($white, 0.99) 160%), rgba($cream-3, 0.22);
     }
 }
+
+// .discount-form::before {
+//     content: "";
+//     position: absolute;
+//     background: url(../../img/bathroom-set_desktop.jpg) no-repeat left 0;
+//     left: 0;
+//     top: 61px;
+//     // display: block;
+//     width: 815px;
+//     height: 365px;
+// }
 
 .discount-form__fieldset {
     border: none;

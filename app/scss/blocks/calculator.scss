@@ -1,22 +1,22 @@
-.calculator__head {
-    padding: 0;
-    padding-bottom: 20px;
-    margin: 0;
-    margin-bottom: 73px;
-    text-align: center;
-    border-bottom: 1px solid $brown-3;
-
-    @include tablet {
-        padding: 0 0 8px 14px;
-        text-align: left;
-        margin-bottom: 50px;
-    }
-}
-
 .calculator {
     margin-bottom: 149px;
 
     @include tablet {
         margin-bottom: 102px;
+    }
+}
+
+.calculator__head {
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0;
+    margin-bottom: 60px;
+    text-align: center;
+    border-bottom: 1px solid $brown-3;
+
+    @include tablet {
+        padding-bottom: 14px;
+        text-align: left;
+        margin-bottom: 50px;
     }
 }

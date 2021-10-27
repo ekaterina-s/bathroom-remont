@@ -27,3 +27,19 @@
 //         padding: 0;
 //     }
 // }
+
+.container{
+    max-width: 1173px;
+    margin: 0 auto;
+
+    @include tablet {
+        max-width: 290px;
+    }
+}
+
+//section.scss
+// .section__container{
+//     max-width: 2000px;
+//     padding-left: 15px;
+//     padding-right: 15px;
+// }

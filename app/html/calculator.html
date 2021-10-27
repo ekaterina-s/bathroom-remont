@@ -15,8 +15,8 @@
 
 <body class="body">
     <picture>
-        <source class="test" media="(max-width: 1074px)" srcset="../img/calculator_mobile.jpg">
-        <img class="test" src="../img/calculator_desktop.jpg" alt="">
+        <source class="test" media="(max-width: 1074px)" srcset="img/calculator_mobile.jpg">
+        <img class="test" src="img/calculator_desktop.jpg" alt="">
     </picture>
     <svg style="display: none;">
         <symbol id="whatsapp" fill="none">
@@ -56,146 +56,154 @@
             </defs>
         </symbol>
     </svg>
-    <header class="header">
-        <div class="header__top-panel header__top-panel--contacts">
-            <a href="index.html" class="logo">
-                <picture>
-                    <source media="(max-width: 1074px)" srcset="../img/logo-mobile.svg">
-                    <img src="../img/logo.svg" alt="логотип">
-                </picture>
-            </a>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link _active">Главная</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">цены</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="calculator.html" class="nav__link">Калькулятор ремонта</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="examples.html" class="nav__link">Примеры работ</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Новости</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Отзывы</a>
-                    </li>
-                </ul>
-            </nav>
-            <a href="tel:+7(950)0191919" class="phone">+7(950) 019 - 19 - 19</a>
-            <button class="header__toggle" aria-label="переключатель меню" type="button"><span
-                    class="visually-hidden">открыть
-                    меню</span></button>
-        </div>
-    </header>
+    @@include('blocks/header.html')
     <section class="calculator">
-        <h2 class="calculator__head section-titles">Рассчитайте стоимость ремонта</h2>
+        <div class="container">
+            <h2 class="calculator__head section-titles">Рассчитайте стоимость ремонта</h2>
+        </div>
         <form action="get" class="calculator__form calculator-form">
-            <div class="calculator-form__first-part">
-                <fieldset class="calculator-form__bathroom-type">
-                    <h4 class="calculator-form__title">Тип санузла:</h4>
-                    <ul class="calculator-form__list">
-                        <li class="calculator-form__item"> <input class="visually-hidden calculator-form__input"
-                                type="radio" name="type" value="choice" id="combined" checked>
-                            <label class="calculator-form__label" for="combined">Совмещённый</label>
-                        </li>
-                        <li class="calculator-form__item"><input class="visually-hidden calculator-form__input"
-                                type="radio" name="type" value="choice" id="separate">
-                            <label class="calculator-form__label" for="separate">Раздельный</label>
-                        </li>
-                        <li class="calculator-form__item"><input class="visually-hidden calculator-form__input"
-                                type="radio" name="type" value="choice" id="bathroom">
-                            <label class="calculator-form__label" for="bathroom">Ванная комната</label>
-                        </li>
-                    </ul>
-                    <div class="calculator-form__area-container">
-                        <label class="calculator-form__area" for="bathroom-area">Площадь:</label>
-                        <input class="calculator-form__number" id="bathroom-area" type="number" name="area"
-                            placeholder="12м2">
-                    </div>
-                </fieldset>
-                <fieldset class="calculator-form__materials materials">
-                    <legend class="visually-hidden">Выбор материала</legend>
-                    <div class="materials__container">
-                        <h4 class="materials__head">Материал отделки стен:</h4>
-                        <select class="materials__select" name="materials">
-                            <option>Выберите</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                    <div class="materials__container">
-                        <h4 class="materials__head">Материал отделки пола:</h4>
-                        <select class="materials__select" name="materials">
-                            <option>Выберите</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                    <div class="materials__container">
-                        <h4 class="materials__head">Материал отделки потолка:</h4>
-                        <select class="materials__select" name="materials">
-                            <option>Выберите</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                </fieldset>
-                <fieldset class="calculator-form__additional-services additional-services">
-                    <h4 class="additional-services__title">Дополнительные услуги:</h4>
-                    <ul class="additional-services__list">
-                        <!-- <div class="additional-services__container"> -->
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="installation" checked>
-                            <label class="additional-services__label" for="installation">Подвесной унитаз
-                                (инсталляция)</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="shower">
-                            <label class="additional-services__label" for="shower">Душевая кабина</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="bidet">
-                            <label class="additional-services__label" for="bidet">Гигиенический душ
-                                (биде)</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="construction">
-                            <label class="additional-services__label" for="construction">Конструкция из ГКП
-                                (ниши/полки)</label>
-                        </li>
-                        <!-- </div> -->
-                        <!-- <div class="additional-services__container"> -->
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="warmfloor">
-                            <label class="additional-services__label" for="warmfloor">Теплый пол</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="hatch">
-                            <label class="additional-services__label" for="hatch">Люк “неведимка” под
-                                плитку</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="boiler">
-                            <label class="additional-services__label" for="boiler">Водонагреватель</label>
-                        </li>
-                        <!-- </div> -->
-                    </ul>
-                </fieldset>
+            <div class="container">
+                <div class="calculator-form__first-part">
+                    <fieldset class="calculator-form__bathroom-type">
+                        <h4 class="calculator-form__title">Тип санузла:</h4>
+                        <ul class="calculator-form__list">
+                            <li class="calculator-form__item"> <input class="visually-hidden calculator-form__input"
+                                    type="radio" name="type" value="choice" id="combined" checked>
+                                <label class="calculator-form__label" for="combined">Совмещённый</label>
+                            </li>
+                            <li class="calculator-form__item"><input class="visually-hidden calculator-form__input"
+                                    type="radio" name="type" value="choice" id="separate">
+                                <label class="calculator-form__label" for="separate">Раздельный</label>
+                            </li>
+                            <li class="calculator-form__item"><input class="visually-hidden calculator-form__input"
+                                    type="radio" name="type" value="choice" id="bathroom">
+                                <label class="calculator-form__label" for="bathroom">Ванная комната</label>
+                            </li>
+                        </ul>
+                        <div class="calculator-form__area-container">
+                            <label class="calculator-form__area" for="bathroom-area">Площадь:</label>
+                            <input class="calculator-form__number" id="bathroom-area" type="number" name="area"
+                                placeholder="12м2">
+                            <div class="calculator-form__buttons">
+                                <button class="calculator-form__button"><svg
+                                        class="calculator-form__icon calculator-form__icon--up">
+                                        <use xlink:href="#down" />
+                                    </svg></button>
+                                <button class="calculator-form__button"><svg class="calculator-form__icon">
+                                        <use xlink:href="#down" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="calculator-form__materials materials">
+                        <legend class="visually-hidden">Выбор материала</legend>
+                        <div class="materials__select" id="select-1">
+                            <h4 class="materials__head">Материал отделки стен:</h4>
+                            <button type="button" class="materials__toggle" name="material" value=""
+                                data-select="toggle" data-index="-1">Выберите</button>
+                            <div class="materials__dropdown">
+                                <ul class="materials__options">
+                                    <li class="materials__option" data-select="option" data-value="tile" data-index="0">
+                                        Плитка</li>
+                                    <li class="materials__option" data-select="option" data-value="porcelain-stoneware"
+                                        data-index="1">Керамогранит</li>
+                                    <li class="materials__option" data-select="option" data-value="mosaic"
+                                        data-index="2">Мозаика</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="materials__select" id="select-1">
+                            <h4 class="materials__head">Материал отделки пола:</h4>
+                            <button type="button" class="materials__toggle" name="material" value=""
+                                data-select="toggle" data-index="-1">Выберите</button>
+                            <div class="materials__dropdown">
+                                <ul class="materials__options">
+                                    <li class="materials__option" data-select="option" data-value="tile" data-index="0">
+                                        Плитка</li>
+                                    <li class="materials__option" data-select="option" data-value="porcelain-stoneware"
+                                        data-index="1">Керамогранит</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="materials__select" id="select-1">
+                            <h4 class="materials__head">Материал отделки потолка:</h4>
+                            <button type="button" class="materials__toggle __active" name="material" value=""
+                                data-select="toggle" data-index="-1">Выберите</button>
+                            <div class="materials__dropdown">
+                                <ul class="materials__options">
+                                    <li class="materials__option" data-select="option" data-value="tile" data-index="0">
+                                        Натяжной потолок</li>
+                                    <li class="materials__option" data-select="option" data-value="porcelain-stoneware"
+                                        data-index="1">Реечный потолок</li>
+                                    <li class="materials__option" data-select="option" data-value="mosaic"
+                                        data-index="2">Панель ПВХ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="calculator-form__additional-services additional-services">
+                        <h4 class="additional-services__title">Дополнительные услуги:</h4>
+                        <ul class="additional-services__list">
+                            <!-- <div class="additional-services__container"> -->
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="installation" checked>
+                                <label class="additional-services__label" for="installation">Подвесной унитаз
+                                    (инсталляция)</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="shower">
+                                <label class="additional-services__label" for="shower">Душевая кабина</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="bidet">
+                                <label class="additional-services__label" for="bidet">Гигиенический душ
+                                    (биде)</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="construction">
+                                <label class="additional-services__label" for="construction">Конструкция из ГКП
+                                    (ниши/полки)</label>
+                            </li>
+                            <!-- </div> -->
+                            <!-- <div class="additional-services__container"> -->
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="warmfloor">
+                                <label class="additional-services__label" for="warmfloor">Теплый пол</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="hatch">
+                                <label class="additional-services__label" for="hatch">Люк “неведимка” под
+                                    плитку</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="boiler">
+                                <label class="additional-services__label" for="boiler">Водонагреватель</label>
+                            </li>
+                            <!-- </div> -->
+                        </ul>
+                    </fieldset>
+                </div>
             </div>
             <div class="calculator-form__second-part">
-                <h3 class="calculator-form__head subtitles">Осталось заполнить форму</h3>
-                <div class="calculator-form__fill-in">
+                <div class="calculator-form__container container">
+                    <!-- <div class="container"> -->
+                    <h3 class="calculator-form__head subtitles">Осталось заполнить форму</h3>
+                    <!-- </div> -->
+                    <div class="calculator-form__fill-in">
+                    <!-- <div class="container"> -->
                     <p class="calculator-form__text">Вы узнаете стоимость ремонта
                         и получите скидку 10 %</p>
+                    <!-- </div> -->
+                    <!-- <div class="calculator-form__container container"> -->
                     <fieldset class="calculator-form__fieldset">
                         <label class="visually-hidden calculator-form__label" for="final-name">Имя</label>
                         <input class="inputs calculator-form__textfield" id="final-name" type="text" name="name"
@@ -206,60 +214,15 @@
                         <button class="calculator-form__submit yellow-buttons" type="submit">Рассчитать
                             стоимость</button>
                     </fieldset>
+                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </form>
+        <!-- </div> -->
     </section>
-    <footer class="footer">
-        <a href="#" class="footer__logo">
-            <picture>
-                <source media="(max-width: 1074px)" srcset="../img/footer__logo-mobile.svg">
-                <img src="../img/footer__logo.svg" alt="логотип">
-            </picture>
-        </a>
-        <div class="footer__flex">
-            <h4 class="footer__title">главная</h4>
-            <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link" href="#">Ремонт ванных комнат</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Наши услуги</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Фото работ</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Видео работ</a></li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">помощь</h4>
-            <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link" href="#">цены</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">бесплатный замер</a></li>
-                <li class="footer__item"><a class="footer__link" href="contacts.html">контакты</a></li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">наш адрес</h4>
-            <ul class="footer__list footer__list--address">
-                <li class="footer__item footer__item--address">Ремонт санузлов в Санкт-Петербурге</li>
-                <li class="footer__item footer__item--address">08.00 - 20.00 Без выходных</li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">мы в соцсетях</h4>
-            <ul class="footer__media-list">
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
-                            <use xlink:href="#whatsapp" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
-                            <use xlink:href="#vk" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
-                            <use xlink:href="#fb" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
-                            <use xlink:href="#instagram" />
-                        </svg></a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="../js/main.js"></script>
+    @@include('blocks/footer.html')
+    <script src="js/main.js"></script>
 </body>
 
 </html>

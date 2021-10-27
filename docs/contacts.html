@@ -15,8 +15,8 @@
 
 <body class="body">
     <picture>
-        <source class="test" media="(max-width: 1074px)" srcset="../img/contacts_mob.jpg">
-        <img class="test" src="../img/contacts_desktop.jpg" alt="">
+        <source class="test" media="(max-width: 1074px)" srcset="img/contacts_mob.jpg">
+        <img class="test" src="img/contacts_desktop.jpg" alt="">
     </picture>
     <svg style="display: none;">
         <symbol id="whatsapp-section" fill="none">
@@ -64,21 +64,22 @@
             </defs>
         </symbol>
     </svg>
-    <header class="header">
-        <div class="header__top-panel header__top-panel--contacts">
+    <header class="header header__rest">
+    <div class="header__top-panel">
+        <div class="header__container container">
             <a href="index.html" class="logo">
                 <picture>
-                    <source media="(max-width: 1074px)" srcset="../img/logo-mobile.svg">
-                    <img src="../img/logo.svg" alt="логотип">
+                    <source media="(max-width: 1074px)" srcset="img/logo-mobile.svg">
+                    <img src="img/logo.svg" alt="логотип">
                 </picture>
             </a>
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link _active">Главная</a>
+                        <a href="index.html" class="nav__link">Главная</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#" class="nav__link">цены</a>
+                        <a href="#" class="nav__link">Цены</a>
                     </li>
                     <li class="nav__item">
                         <a href="calculator.html" class="nav__link">Калькулятор ремонта</a>
@@ -99,12 +100,13 @@
                     class="visually-hidden">открыть
                     меню</span></button>
         </div>
-    </header>
+    </div>
+</header>;
     <section class="contacts">
-        <h2 class="contacts__head section-titles">Наши контакты</span>
+        <h2 class="contacts__head section-titles">Наши контакты
         </h2>
         <div class="contacts__container">
-            <img class="contacts__img" src="../img/contactas__img.jpg" alt="набор для ванной из трех предметов">
+            <img class="contacts__img" src="img/contactas__img.jpg" alt="набор для ванной из трех предметов">
             <div class="contacts__subcontainer">
                 <p class="contacts__schedule">Звоните: 08.00 - 20.00 Без выходных</p>
                 <p class="contacts__phone">+7(950) 019 - 19 - 19</p>
@@ -120,55 +122,58 @@
         </div>
     </section>
     <footer class="footer">
+    <div class="footer__container container">
         <a href="#" class="footer__logo">
             <picture>
-                <source media="(max-width: 1074px)" srcset="../img/footer__logo-mobile.svg">
-                <img src="../img/footer__logo.svg" alt="логотип">
+                <source media="(max-width: 1074px)" srcset="img/footer__logo-mobile.svg">
+                <img src="img/footer__logo.svg" alt="логотип">
             </picture>
         </a>
-        <div class="footer__flex">
-            <h4 class="footer__title">главная</h4>
-            <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link" href="#">Ремонт ванных комнат</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Наши услуги</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Фото работ</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Видео работ</a></li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">помощь</h4>
-            <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link" href="#">цены</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">бесплатный замер</a></li>
-                <li class="footer__item"><a class="footer__link" href="contacts.html">контакты</a></li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">наш адрес</h4>
-            <ul class="footer__list footer__list--address">
-                <li class="footer__item footer__item--address">Ремонт санузлов в Санкт-Петербурге</li>
-                <li class="footer__item footer__item--address">08.00 - 20.00 Без выходных</li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">мы в соцсетях</h4>
-            <ul class="footer__media-list">
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
+        <dl class="footer__list">
+            <dt class="footer__term">главная</dt>
+            <dd class="footer__item"><a class="footer__link" href="#">Ремонт ванных комнат</a></dd>
+            <dd class="footer__item"><a class="footer__link" href="#">Наши услуги</a></dd>
+            <dd class="footer__item"><a class="footer__link" href="#">Фото работ</a></dd>
+            <dd class="footer__item"><a class="footer__link" href="#">Видео работ</a></dd>
+        </dl>
+        <dl class="footer__list">
+            <dt class="footer__term">помощь</dt>
+            <dd class="footer__item"><a class="footer__link" href="#">цены</a></dd>
+            <dd class="footer__item"><a class="footer__link" href="#">бесплатный замер</a></dd>
+            <dd class="footer__item"><a class="footer__link" href="contacts.html">контакты</a></dd>
+        </dl>
+        <div class="footer__show-list show-help"><a href="#"> <svg class="show-help__icon">
+                    <use xlink:href="#show-help" />
+                </svg></a></div>
+        <dl class="footer__list">
+            <dt class="footer__term">наш адрес</dt>
+            <dd class="footer__item footer__item--lowercase">Ремонт санузлов в Санкт-Петербурге</dd>
+            <dd class="footer__item footer__item--lowercase">08.00 - 20.00 Без выходных</dd>
+        </dl>
+        <dl class="footer__list footer__list--social social">
+            <dt class="footer__term footer__term--none">мы в соцсетях</dt>
+            <div class="social__container">
+                <dd class="footer__item footer__item--social"><a href="#" class="footer__media-link"><svg
+                            class="footer__media-icon">
                             <use xlink:href="#whatsapp" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
+                        </svg></a></dd>
+                <dd class="footer__item footer__item--social"><a href="#" class="footer__media-link"><svg
+                            class="footer__media-icon">
                             <use xlink:href="#vk" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
+                        </svg></a></dd>
+                <dd class="footer__item footer__item--social"><a href="#" class="footer__media-link"><svg
+                            class="footer__media-icon">
                             <use xlink:href="#fb" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
+                        </svg></a></dd>
+                <dd class="footer__item footer__item--social"><a href="#" class="footer__media-link"><svg
+                            class="footer__media-icon">
                             <use xlink:href="#instagram" />
-                        </svg></a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="../js/main.js"></script>
+                        </svg></a></dd>
+            </div>
+        </dl>
+    </div>
+</footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,9 @@
 .description {
-    padding: 0 215px 165px 215px;
+    padding: 0 215px 100px 215px;
 
     @include tablet {
-        padding: 0 15px 15px 15px;
+        padding: 0 15px;
+        margin-bottom: 70px;
     }
 }
 
@@ -27,7 +28,7 @@
 .description__head::before {
     position: absolute;
     content: "";
-    background: url("../../img/commas.svg") no-repeat 0 0;
+    background: url("../img/commas.svg") no-repeat 0 0;
     width: 356px;
     height: 316px;
     top: 60px;
@@ -35,6 +36,13 @@
 
     @include tablet {
         display: none;
+    }
+}
+
+.description__box {
+    @include tablet {
+        height: 80px;
+        overflow: hidden;
     }
 }
 
@@ -51,18 +59,17 @@
     }
 }
 
-.description__rest {
+.description__show-more {
+    display: none;
+
     @include tablet {
-        transform: translateY(-100%);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-        opacity: 0;
-        pointer-events: none;
-        z-index: 1;
-        overflow-y: auto;
+        display: block;
+    }
+}
+
+.description__icon {
+    @include tablet {
+        width: 15px;
+        height: 7px;
     }
 }

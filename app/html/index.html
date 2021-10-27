@@ -14,22 +14,25 @@
 </head>
 
 <body class="body">
-    <!-- <picture>
-        <source class="test" media="(max-width: 1074px)" srcset="../img/Decktop-mob.jpg">
-        <img class="test" src="../img/Decktop.jpg" alt="">
-    </picture> -->
+    <picture>
+        <source class="test" media="(max-width: 1074px)" srcset="img/Decktop-mob.jpg">
+        <img class="test" src="img/Decktop.jpg" alt="">
+    </picture>
     <svg style="display: none;">
         <symbol id="request" viewBox="0 0 45 21">
             <path
                 d="M44.5749 11.5082C45.1417 10.9514 45.1417 10.0486 44.5749 9.49175L35.3368 0.417625C34.7699 -0.139208 33.8509 -0.139208 33.2839 0.417625C32.7171 0.974464 32.7171 1.87726 33.2839 2.4341L41.4955 10.5L33.2839 18.5659C32.7171 19.1227 32.7171 20.0255 33.2839 20.5824C33.8509 21.1392 34.7699 21.1392 35.3368 20.5824L44.5749 11.5082ZM0 11.9259H43.5484V9.07413H0V11.9259Z"
                 fill="#DBAF15" />
         </symbol>
-        <symbol id="video" viewBox="0 0 45 45">
-            <circle cx="22.5" cy="22.5" r="21.5" stroke="white" stroke-width="2" />
-            <path d="M18.9832 16.03L29.0927 22.2548L18.9832 28.4797V16.03Z" stroke="white" stroke-width="2" />
-        </symbol>
         <symbol id="arrow" viewBox="0 0 18 39" fill="none">
             <path d="M17.0542 37.9814L2.00015 19.4842L17.0542 0.986962" stroke="#693030" stroke-width="2" />
+        </symbol>
+        <symbol id="down" viewBox="0 0 25 25" fill="none">
+            <circle r="12" transform="matrix(1 0 0 -1 12.5 12.5)" stroke="#693030" />
+            <path d="M9 11L12.5 14L16 11" stroke="#693030" />
+        </symbol>
+        <symbol id="show-more" viewBox="0 0 16 9" fill="none">
+            <path d="M0 4.5H15M15 4.5L11.7391 1M15 4.5L11.7391 8" stroke="#693030" stroke-opacity="0.7" />
         </symbol>
         <symbol id="cellphone" viewBox="0 0 35 35" fill="none">
             <path
@@ -38,6 +41,11 @@
             <path
                 d="M24.7697 13.8576V16.2395C24.7697 16.4707 24.6376 16.6817 24.4296 16.7827C24.2216 16.8838 23.9741 16.8572 23.7923 16.7143L16.9167 11.3121C16.771 11.1975 16.686 11.0225 16.686 10.8373C16.686 10.652 16.771 10.477 16.9167 10.3625L23.7923 4.96022C23.9741 4.81731 24.2216 4.79073 24.4296 4.89178C24.6376 4.99283 24.7697 5.20377 24.7697 5.43503V7.82293C24.7697 8.1535 25.0354 8.4227 25.3659 8.427C27.9761 8.46022 33.7161 8.88489 34.8445 14.2756C34.8918 14.5243 34.779 14.776 34.562 14.9063C34.345 15.0366 34.0698 15.0178 33.8726 14.8592C32.9079 14.0715 31.2237 13.2535 28.3942 13.2535H25.3738C25.0401 13.2535 24.7697 13.524 24.7697 13.8576Z"
                 fill="#693030" />
+        </symbol>
+        <symbol id="show-help" viewBox="0 0 36 8" fill="none">
+            <circle cx="4" cy="4" r="4" fill="#A8A8A7" />
+            <circle cx="18" cy="4" r="4" fill="#A8A8A7" />
+            <circle cx="32" cy="4" r="4" fill="#A8A8A7" />
         </symbol>
         <symbol id="whatsapp" fill="none">
             <path
@@ -76,951 +84,1036 @@
             </defs>
         </symbol>
     </svg>
-    <header class="header">
+    <header class="header header-index">
         <div class="header__top-panel">
-            <a href="#" class="logo">
-                <picture>
-                    <source media="(max-width: 1074px)" srcset="../img/logo-mobile.svg">
-                    <img src="../img/logo.svg" alt="логотип">
-                </picture>
-            </a>
-            <nav class="nav _active">
-                <ul class="nav__list _active">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link _active">Главная</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">цены</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Калькулятор ремонта</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="examples.html" class="nav__link">Примеры работ</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Новости</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Отзывы</a>
-                    </li>
-                </ul>
-            </nav>
-            <a href="tel:+7(950)0191919" class="phone">+7(950) 019 - 19 - 19</a>
-            <button class="header__toggle _active" aria-label="переключатель меню" type="button"><span
-                    class="visually-hidden">открыть
-                    меню</span></button>
+            <div class="header__container container">
+                <a href="#" class="logo">
+                    <picture>
+                        <source media="(max-width: 1074px)" srcset="img/logo-mobile.svg">
+                        <img src="img/logo.svg" alt="логотип">
+                    </picture>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Цены</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="calculator.html" class="nav__link">Калькулятор ремонта</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="examples.html" class="nav__link">Примеры работ</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Новости</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="tel:+7(950)0191919" class="phone">+7(950) 019 - 19 - 19</a>
+                <button class="header__toggle" aria-label="переключатель меню" type="button"><span
+                        class="visually-hidden">открыть
+                        меню</span></button>
+            </div>
         </div>
         <h1 class="header__head">artistic</h1>
         <p class="header__text">Бережный и аккуратный ремонт для вашей ванной</p>
     </header>
     <section class="advantages">
-        <h2 class="advantages__head">Почему выбирают нас</h2>
-        <p class="advantages__text section-titles">Мы работаем только в Санкт-Петербурге. Благодаря этому
-            поддерживаем качество и
-            не
-            распыляемся</p>
-        <ul class="advantages__list">
-            <li class="advantages__item">
-                <h3 class="advantages__title subtitles">Гарантия</h3>
-                <p class="advantages__description">Реальная гарантия <span
-                        class="advantages__description advantages__description--bold">60
-                        месяцев</span></p>
-            </li>
-            <li class="advantages__item">
-                <h3 class="advantages__title subtitles">Выгода</h3>
-                <p class="advantages__description">Ремонт ванной
-                    от <span class="advantages__description advantages__description--bold">27 000 руб.</span></p>
-            </li>
-            <li class="advantages__item">
-                <h3 class="advantages__title subtitles">Скорость</h3>
-                <p class="advantages__description">Ванна под ключ
-                    за <span class="advantages__description advantages__description--bold">12 дней</span></p>
-            </li>
-            <li class="advantages__item">
-                <h3 class="advantages__title subtitles">Опыт</h3>
-                <p class="advantages__description">Успешно трудимся
-                    начиная с <span class="advantages__description advantages__description--bold">2007 года</span>
-                </p>
-            </li>
-        </ul>
-        <a href="#" class="advantages__link">Оставить заявку
-            <svg class="advantages__request">
-                <use xlink:href="#request" />
-            </svg>
-        </a>
+        <div class="container">
+            <h2 class="advantages__head">Почему выбирают нас</h2>
+            <p class="advantages__text section-titles">Мы работаем только в Санкт-Петербурге. Благодаря этому
+                поддерживаем качество и
+                не
+                распыляемся</p>
+            <ul class="advantages__list">
+                <li class="advantages__item">
+                    <h3 class="advantages__title subtitles">Гарантия</h3>
+                    <p class="advantages__description">Реальная гарантия <span
+                            class="advantages__description advantages__description--bold">60
+                            месяцев</span></p>
+                </li>
+                <li class="advantages__item">
+                    <h3 class="advantages__title subtitles">Выгода</h3>
+                    <p class="advantages__description">Ремонт ванной
+                        от <span class="advantages__description advantages__description--bold">27 000 руб.</span></p>
+                </li>
+                <li class="advantages__item">
+                    <h3 class="advantages__title subtitles">Скорость</h3>
+                    <p class="advantages__description">Ванна под ключ
+                        за <span class="advantages__description advantages__description--bold">12 дней</span></p>
+                </li>
+                <li class="advantages__item">
+                    <h3 class="advantages__title subtitles">Опыт</h3>
+                    <p class="advantages__description">Успешно трудимся
+                        начиная с <span class="advantages__description advantages__description--bold">2007 года</span>
+                    </p>
+                </li>
+            </ul>
+            <a href="#" class="advantages__link">Оставить заявку
+                <svg class="advantages__request">
+                    <use xlink:href="#request" />
+                </svg>
+            </a>
+        </div>
     </section>
     <section class="discount-price">
-        <h2 class="discount-price__head section-titles">Расчитайте стоимость ремонта санузла быстро
-            и легко со скидкой <span class="discount-price__head discount-price__head--accent">5 000 рублей</span>
-        </h2>
-        <img class="discount-price__img" src="../img/bathroom-set_desktop.jpg" alt="набор для ванной из трех предметов">
-        <form action="get" class="discount-price__form discount-form">
-            <fieldset class="discount-form__fieldset">
-                <legend class="visually-hidden">Площадь санузла</legend>
-                <label class="discount-form__label" for="area">Площадь санузла</label>
-                <input class="inputs discount-form__textfield" id="area" type="number" name="area" placeholder="м2">
-            </fieldset>
-            <fieldset class="discount-form__fieldset">
-                <legend class="visually-hidden">Имя</legend>
-                <label class="discount-form__label" for="name">Имя</label>
-                <input class="inputs discount-form__textfield" id="name" type="text" name="name" placeholder="Ваше имя">
-            </fieldset>
-            <fieldset class="discount-form__fieldset">
-                <legend class="visually-hidden">Телефон</legend>
-                <label class="discount-form__label" for="phone">Телефон</label>
-                <input class="inputs discount-form__textfield" id="phone" type="number" name="phone"
-                    placeholder="+ 7(___)___-__-__">
-            </fieldset>
-            <button class="discount-form__submit yellow-buttons" type="submit">Рассчитать стоимость</button>
-        </form>
+        <div class="container">
+            <h2 class="discount-price__head section-titles">Расчитайте стоимость ремонта санузла быстро
+                и легко со скидкой <span class="discount-price__head discount-price__head--accent">5 000 рублей</span>
+            </h2>
+        </div>
+        <!-- <img class="discount-price__img" src="img/bathroom-set_desktop.jpg" alt="набор для ванной из трех предметов"> -->
+        <div class="discount-price__container container">
+            <form action="get" class="discount-price__form discount-form">
+                <!-- <div class="container"> -->
+                <fieldset class="discount-form__fieldset">
+                    <legend class="visually-hidden">Площадь санузла</legend>
+                    <label class="discount-form__label" for="area">Площадь санузла</label>
+                    <input class="inputs discount-form__textfield" id="area" type="number" name="area" placeholder="м2">
+                </fieldset>
+                <fieldset class="discount-form__fieldset">
+                    <legend class="visually-hidden">Имя</legend>
+                    <label class="discount-form__label" for="name">Имя</label>
+                    <input class="inputs discount-form__textfield" id="name" type="text" name="name"
+                        placeholder="Ваше имя">
+                </fieldset>
+                <fieldset class="discount-form__fieldset">
+                    <legend class="visually-hidden">Телефон</legend>
+                    <label class="discount-form__label" for="phone">Телефон</label>
+                    <input class="inputs discount-form__textfield" id="phone" type="number" name="phone"
+                        placeholder="+ 7(___)___-__-__">
+                </fieldset>
+                <button class="discount-form__submit yellow-buttons" type="submit">Рассчитать стоимость</button>
+                <!-- </div> -->
+            </form>
+        </div>
     </section>
     <section class="services">
-        <h2 class="services__head section-titles">Виды работ</h2>
-        <ul class="services__list">
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-1_mobile.jpg">
-                        <img class="services__img" src="../img/services-1_desktop.jpg" alt="изображение санузла">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Ремонт санузлов под ключ</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-2_mobile.jpg">
-                        <img class="services__img" src="../img/services-2_desktop.jpg" alt="изображение досок">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Закупка и доставка товаров</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-3_mobile.jpg">
-                        <img class="services__img" src="../img/services-3_desktop.jpg"
-                            alt="изображение демонтажа плитки">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Демонтажные работы</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-4_mobile.jpg">
-                        <img class="services__img" src="../img/services-4_desktop.jpg"
-                            alt="изображение разводки электропроводки">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Разводка электропроводки</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-5_mobile.jpg">
-                        <img class="services__img" src="../img/services-5_desktop.jpg"
-                            alt="изображение укладки плитки на пол">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Укладка плитки на стены и пол</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-6_mobile.jpg">
-                        <img class="services__img" src="../img/services-6_desktop.jpg" alt="изображение труб">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Разводка труб</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-7_mobile.jpg">
-                        <img class="services__img" src="../img/services-7_desktop.jpg"
-                            alt="изображение отделанных стен">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Отделка стен</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-8_mobile.jpg">
-                        <img class="services__img" src="../img/services-8_desktop.jpg"
-                            alt="изображение выравнивания полов">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Выравнивание полов</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-9_mobile.jpg">
-                        <img class="services__img" src="../img/services-9_desktop.jpg"
-                            alt="изображение отделанного потолка">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Отделка потолка</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-10_mobile.jpg">
-                        <img class="services__img" src="../img/services-10_desktop.jpg" alt="изображение санузла">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Дизайн проект</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-11_mobile.jpg">
-                        <img class="services__img" src="../img/services-11_desktop.jpg" alt="изображение душа">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Установка бытовой техника</figcaption>
-                </figure>
-            </li>
-            <li class="services__item">
-                <figure class="services__figure">
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/services-12_mobile.jpg">
-                        <img class="services__img" src="../img/services-12_desktop.jpg"
-                            alt="изображение установки сантехники">
-                    </picture>
-                    <figcaption class="services__figcaption figcaptions">Установка сантехники</figcaption>
-                </figure>
-            </li>
-        </ul>
+        <div class="container">
+            <h2 class="services__head section-titles">Виды работ</h2>
+            <ul class="services__list">
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-1_mobile.jpg">
+                            <img class="services__img" src="img/services-1_desktop.jpg" alt="изображение санузла">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Ремонт санузлов под ключ</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-2_mobile.jpg">
+                            <img class="services__img" src="img/services-2_desktop.jpg" alt="изображение досок">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Закупка и доставка товаров</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-3_mobile.jpg">
+                            <img class="services__img" src="img/services-3_desktop.jpg"
+                                alt="изображение демонтажа плитки">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Демонтажные работы</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-4_mobile.jpg">
+                            <img class="services__img" src="img/services-4_desktop.jpg"
+                                alt="изображение разводки электропроводки">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Разводка электропроводки</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-5_mobile.jpg">
+                            <img class="services__img" src="img/services-5_desktop.jpg"
+                                alt="изображение укладки плитки на пол">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Укладка плитки на стены и пол</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-6_mobile.jpg">
+                            <img class="services__img" src="img/services-6_desktop.jpg" alt="изображение труб">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Разводка труб</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-7_mobile.jpg">
+                            <img class="services__img" src="img/services-7_desktop.jpg"
+                                alt="изображение отделанных стен">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Отделка стен</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-8_mobile.jpg">
+                            <img class="services__img" src="img/services-8_desktop.jpg"
+                                alt="изображение выравнивания полов">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Выравнивание полов</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-9_mobile.jpg">
+                            <img class="services__img" src="img/services-9_desktop.jpg"
+                                alt="изображение отделанного потолка">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Отделка потолка</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-10_mobile.jpg">
+                            <img class="services__img" src="img/services-10_desktop.jpg" alt="изображение санузла">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Дизайн проект</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-11_mobile.jpg">
+                            <img class="services__img" src="img/services-11_desktop.jpg" alt="изображение душа">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Установка бытовой техника</figcaption>
+                    </figure>
+                </li>
+                <li class="services__item">
+                    <figure class="services__figure">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/services-12_mobile.jpg">
+                            <img class="services__img" src="img/services-12_desktop.jpg"
+                                alt="изображение установки сантехники">
+                        </picture>
+                        <figcaption class="services__figcaption figcaptions">Установка сантехники</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
     </section>
     <section class="examples">
-        <h2 class="examples__head section-titles">Примеры работ</h2>
-        <ul class="examples__list">
-            <li class="examples__item">
-                <div class="examples__before-after">
-                    <figure class="examples__figure">
+        <div class="examples__container container">
+            <h2 class="examples__head section-titles">Примеры работ</h2>
+            <ul class="examples__list">
+                <li class="examples__item">
+                    <div class="examples__first-box">
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/before-1_mobile.jpg">
+                                <img class="examples__img examples__img--first" src="img/before-1_desktop.jpg"
+                                    alt="фото до ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
+                            </figcaption>
+                        </figure>
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/after-1_mobile.jpg">
+                                <img class="examples__img" src="img/after-1_desktop.jpg" alt="фото после ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="examples__second-box">
                         <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/before-1_mobile.jpg">
-                            <img class="examples__img examples__img--first" src="../img/before-1_desktop.jpg"
-                                alt="фото до ремонта">
+                            <source media="(max-width: 1074px)" srcset="img/examples-1-1_mobile.jpg">
+                            <img class="examples__img" src="img/examples-1-1_desktop.jpg" alt="пример работы">
                         </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
-                        </figcaption>
-                    </figure>
-                    <figure class="examples__figure">
                         <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/after-1_mobile.jpg">
-                            <img class="examples__img" src="../img/after-1_desktop.jpg" alt="фото после ремонта">
+                            <source media="(max-width: 1074px)" srcset="img/examples-1-2_mobile.jpg">
+                            <img class="examples__img" src="img/examples-1-2_desktop.jpg" alt="пример работы">
                         </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
-                        </figcaption>
-                    </figure>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-1-1_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-1-1_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-1-2_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-1-2_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-1-3_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-1-3_desktop.jpg" alt="пример работы">
-                    </picture>
-                </div>
-                <div class="examples__remont">
-                    <h3 class="examples__title">Ремонт санузла в стиле лофт</h3>
-                    <div class="examples__description">
-                        <div class="examples__area">
-                            <div class="examples__area-number">4,2 м2</div>
-                            <div class="examples__area-description">Площадь санузла</div>
-                        </div>
-                        <div class="examples__terms">
-                            <div class="examples__terms-days">15 дней</div>
-                            <div class="examples__terms-description">Сроки ремонта</div>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-1-3_mobile.jpg">
+                            <img class="examples__img" src="img/examples-1-3_desktop.jpg" alt="пример работы">
+                        </picture>
+                    </div>
+                    <div class="examples__third-box">
+                        <h3 class="examples__title">Ремонт санузла в стиле лофт</h3>
+                        <div class="examples__description">
+                            <div class="examples__area">
+                                <div class="examples__area-number">4,2 м2</div>
+                                <div class="examples__area-description">Площадь санузла</div>
+                            </div>
+                            <div class="examples__terms">
+                                <div class="examples__terms-days">15 дней</div>
+                                <div class="examples__terms-description">Сроки ремонта</div>
+                            </div>
                         </div>
                     </div>
-                    <figure class="examples__figure-video">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/video_mobile.jpg">
-                            <img class="examples__video" src="../img/video_desktop.jpg" alt="видео ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption-video">
-                            <svg class="examples__svg-video">
-                                <use xlink:href="#video" />
-                            </svg>
-                            смотреть видео
-                        </figcaption>
-                    </figure>
-                    <a href="#" class="examples__more yellow-buttons">Подробнее</a>
-                </div>
-            </li>
-            <li class="examples__item">
-                <div class="examples__before-after">
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/before-2_mobile.jpg">
-                            <img class="examples__img examples__img--first" src="../img/before-2_desktop.jpg"
-                                alt="фото до ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
-                        </figcaption>
-                    </figure>
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/after-2_mobile.jpg">
-                            <img class="examples__img" src="../img/after-2_desktop.jpg" alt="фото после ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
-                        </figcaption>
-                    </figure>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-2-1_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-2-1_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-2-2_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-2-2_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-2-3_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-2-3_desktop.jpg" alt="пример работы">
-                    </picture>
-                </div>
-                <div class="examples__remont">
-                    <h3 class="examples__title">Ремонт ванной комнаты
-                        и санузла</h3>
-                    <div class="examples__description">
-                        <div class="examples__area">
-                            <div class="examples__area-number">4,2 м2</div>
-                            <div class="examples__area-description">Площадь санузла</div>
+                    <div class="examples__fourth-box">
+                        <div class="examples__video-box">
+                            <button class="examples__video-button">
+                                смотреть видео
+                            </button>
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/video_mobile.jpg">
+                                <img class="examples__video" src="img/video_desktop.jpg" alt="видео ремонта">
+                            </picture>
                         </div>
-                        <div class="examples__terms">
-                            <div class="examples__terms-days">15 дней</div>
-                            <div class="examples__terms-description">Сроки ремонта</div>
+                        <a href="#" class="examples__more yellow-buttons">Подробнее</a>
+                    </div>
+                </li>
+                <li class="examples__item">
+                    <div class="examples__first-box">
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/before-2_mobile.jpg">
+                                <img class="examples__img examples__img--first" src="img/before-2_desktop.jpg"
+                                    alt="фото до ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
+                            </figcaption>
+                        </figure>
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/after-2_mobile.jpg">
+                                <img class="examples__img" src="img/after-2_desktop.jpg" alt="фото после ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="examples__second-box">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-2-1_mobile.jpg">
+                            <img class="examples__img" src="img/examples-2-1_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-2-2_mobile.jpg">
+                            <img class="examples__img" src="img/examples-2-2_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-2-3_mobile.jpg">
+                            <img class="examples__img" src="img/examples-2-3_desktop.jpg" alt="пример работы">
+                        </picture>
+                    </div>
+                    <div class="examples__third-box">
+                        <h3 class="examples__title">Ремонт ванной комнаты
+                            и санузла</h3>
+                        <div class="examples__description">
+                            <div class="examples__area">
+                                <div class="examples__area-number">4,2 м2</div>
+                                <div class="examples__area-description">Площадь санузла</div>
+                            </div>
+                            <div class="examples__terms">
+                                <div class="examples__terms-days">15 дней</div>
+                                <div class="examples__terms-description">Сроки ремонта</div>
+                            </div>
                         </div>
                     </div>
-                    <figure class="examples__figure-video">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/video_mobile.jpg">
-                            <img class="examples__video" src="../img/video_desktop.jpg" alt="видео ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption-video">
-                            <svg class="examples__svg-video">
-                                <use xlink:href="#video" />
-                            </svg>
-                            смотреть видео
-                        </figcaption>
-                    </figure>
-                    <a href="#" class="examples__more yellow-buttons">Подробнее</a>
-                </div>
-            </li>
-            <li class="examples__item">
-                <div class="examples__before-after">
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/before-3_mobile.jpg">
-                            <img class="examples__img examples__img--first" src="../img/before-3_desktop.jpg"
-                                alt="фото до ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
-                        </figcaption>
-                    </figure>
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/after-3_mobile.jpg">
-                            <img class="examples__img" src="../img/after-3_desktop.jpg" alt="фото после ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
-                        </figcaption>
-                    </figure>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-3-1_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-3-1_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-3-2_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-3-2_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-3-3_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-3-3_desktop.jpg" alt="пример работы">
-                    </picture>
-                </div>
-                <div class="examples__remont">
-                    <h3 class="examples__title">Ремонт раздельного санузла</h3>
-                    <div class="examples__description">
-                        <div class="examples__area">
-                            <div class="examples__area-number">4,2 м2</div>
-                            <div class="examples__area-description">Площадь санузла</div>
+                    <div class="examples__fourth-box">
+                        <div class="examples__video-box">
+                            <button class="examples__video-button">
+                                смотреть видео
+                            </button>
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/video_mobile.jpg">
+                                <img class="examples__video" src="img/video_desktop.jpg" alt="видео ремонта">
+                            </picture>
                         </div>
-                        <div class="examples__terms">
-                            <div class="examples__terms-days">15 дней</div>
-                            <div class="examples__terms-description">Сроки ремонта</div>
+                        <a href="#" class="examples__more yellow-buttons">Подробнее</a>
+                    </div>
+                </li>
+                <li class="examples__item">
+                    <div class="examples__first-box">
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/before-3_mobile.jpg">
+                                <img class="examples__img examples__img--first" src="img/before-3_desktop.jpg"
+                                    alt="фото до ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
+                            </figcaption>
+                        </figure>
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/after-3_mobile.jpg">
+                                <img class="examples__img" src="img/after-3_desktop.jpg" alt="фото после ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="examples__second-box">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-3-1_mobile.jpg">
+                            <img class="examples__img" src="img/examples-3-1_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-3-2_mobile.jpg">
+                            <img class="examples__img" src="img/examples-3-2_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-3-3_mobile.jpg">
+                            <img class="examples__img" src="img/examples-3-3_desktop.jpg" alt="пример работы">
+                        </picture>
+                    </div>
+                    <div class="examples__third-box">
+                        <h3 class="examples__title">Ремонт раздельного санузла</h3>
+                        <div class="examples__description">
+                            <div class="examples__area">
+                                <div class="examples__area-number">4,2 м2</div>
+                                <div class="examples__area-description">Площадь санузла</div>
+                            </div>
+                            <div class="examples__terms">
+                                <div class="examples__terms-days">15 дней</div>
+                                <div class="examples__terms-description">Сроки ремонта</div>
+                            </div>
                         </div>
                     </div>
-                    <figure class="examples__figure-video">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/video_mobile.jpg">
-                            <img class="examples__video" src="../img/video_desktop.jpg" alt="видео ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption-video">
-                            <svg class="examples__svg-video">
-                                <use xlink:href="#video" />
-                            </svg>
-                            смотреть видео
-                        </figcaption>
-                    </figure>
-                    <a href="#" class="examples__more yellow-buttons">Подробнее</a>
-                </div>
-            </li>
-            <li class="examples__item">
-                <div class="examples__before-after">
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/before-4_mobile.jpg">
-                            <img class="examples__img examples__img--first" src="../img/before-4_desktop.jpg"
-                                alt="фото до ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
-                        </figcaption>
-                    </figure>
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/after-4_mobile.jpg">
-                            <img class="examples__img" src="../img/after-4_desktop.jpg" alt="фото после ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
-                        </figcaption>
-                    </figure>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-4-1_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-4-1_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-4-2_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-4-2_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-4-3_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-4-3_desktop.jpg" alt="пример работы">
-                    </picture>
-                </div>
-                <div class="examples__remont">
-                    <h3 class="examples__title">Ремонт совмещенного санузла</h3>
-                    <div class="examples__description">
-                        <div class="examples__area">
-                            <div class="examples__area-number">4,2 м2</div>
-                            <div class="examples__area-description">Площадь санузла</div>
+                    <div class="examples__fourth-box">
+                        <div class="examples__video-box">
+                            <button class="examples__video-button">
+                                смотреть видео
+                            </button>
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/video_mobile.jpg">
+                                <img class="examples__video" src="img/video_desktop.jpg" alt="видео ремонта">
+                            </picture>
                         </div>
-                        <div class="examples__terms">
-                            <div class="examples__terms-days">15 дней</div>
-                            <div class="examples__termsdescription">Сроки ремонта</div>
+                        <a href="#" class="examples__more yellow-buttons">Подробнее</a>
+                    </div>
+                </li>
+                <li class="examples__item">
+                    <div class="examples__first-box">
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/before-4_mobile.jpg">
+                                <img class="examples__img examples__img--first" src="img/before-4_desktop.jpg"
+                                    alt="фото до ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
+                            </figcaption>
+                        </figure>
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/after-4_mobile.jpg">
+                                <img class="examples__img" src="img/after-4_desktop.jpg" alt="фото после ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="examples__second-box">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-4-1_mobile.jpg">
+                            <img class="examples__img" src="img/examples-4-1_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-4-2_mobile.jpg">
+                            <img class="examples__img" src="img/examples-4-2_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-4-3_mobile.jpg">
+                            <img class="examples__img" src="img/examples-4-3_desktop.jpg" alt="пример работы">
+                        </picture>
+                    </div>
+                    <div class="examples__third-box">
+                        <h3 class="examples__title">Ремонт совмещенного санузла</h3>
+                        <div class="examples__description">
+                            <div class="examples__area">
+                                <div class="examples__area-number">4,2 м2</div>
+                                <div class="examples__area-description">Площадь санузла</div>
+                            </div>
+                            <div class="examples__terms">
+                                <div class="examples__terms-days">15 дней</div>
+                                <div class="examples__termsdescription">Сроки ремонта</div>
+                            </div>
                         </div>
                     </div>
-                    <figure class="examples__figure-video">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/video_mobile.jpg">
-                            <img class="examples__video" src="../img/video_desktop.jpg" alt="видео ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption-video">
-                            <svg class="examples__svg-video">
-                                <use xlink:href="#video" />
-                            </svg>
-                            смотреть видео
-                        </figcaption>
-                    </figure>
-                    <a href="#" class="examples__more yellow-buttons">Подробнее</a>
-                </div>
-            </li>
-            <li class="examples__item">
-                <div class="examples__before-after">
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/before-5_mobile.jpg">
-                            <img class="examples__img examples__img--first" src="../img/before-5_desktop.jpg"
-                                alt="фото до ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
-                        </figcaption>
-                    </figure>
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/after-5_mobile.jpg">
-                            <img class="examples__img" src="../img/after-5_desktop.jpg" alt="фото после ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
-                        </figcaption>
-                    </figure>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-5-1_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-5-1_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-5-2_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-5-2_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-5-3_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-5-3_desktop.jpg" alt="пример работы">
-                    </picture>
-                </div>
-                <div class="examples__remont">
-                    <h3 class="examples__title">Ремонт санузла</h3>
-                    <div class="examples__description">
-                        <div class="examples__area">
-                            <div class="examples__area-number">4,2 м2</div>
-                            <div class="examples__area-description">Площадь санузла</div>
+                    <div class="examples__fourth-box">
+                        <div class="examples__video-box">
+                            <button class="examples__video-button">
+                                смотреть видео
+                            </button>
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/video_mobile.jpg">
+                                <img class="examples__video" src="img/video_desktop.jpg" alt="видео ремонта">
+                            </picture>
                         </div>
-                        <div class="examples__terms">
-                            <div class="examples__terms-days">15 дней</div>
-                            <div class="examples__terms-description">Сроки ремонта</div>
+                        <a href="#" class="examples__more yellow-buttons">Подробнее</a>
+                    </div>
+                </li>
+                <li class="examples__item">
+                    <div class="examples__first-box">
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/before-5_mobile.jpg">
+                                <img class="examples__img examples__img--first" src="img/before-5_desktop.jpg"
+                                    alt="фото до ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
+                            </figcaption>
+                        </figure>
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/after-5_mobile.jpg">
+                                <img class="examples__img" src="img/after-5_desktop.jpg" alt="фото после ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="examples__second-box">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-5-1_mobile.jpg">
+                            <img class="examples__img" src="img/examples-5-1_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-5-2_mobile.jpg">
+                            <img class="examples__img" src="img/examples-5-2_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-5-3_mobile.jpg">
+                            <img class="examples__img" src="img/examples-5-3_desktop.jpg" alt="пример работы">
+                        </picture>
+                    </div>
+                    <div class="examples__third-box">
+                        <h3 class="examples__title">Ремонт санузла</h3>
+                        <div class="examples__description">
+                            <div class="examples__area">
+                                <div class="examples__area-number">4,2 м2</div>
+                                <div class="examples__area-description">Площадь санузла</div>
+                            </div>
+                            <div class="examples__terms">
+                                <div class="examples__terms-days">15 дней</div>
+                                <div class="examples__terms-description">Сроки ремонта</div>
+                            </div>
                         </div>
                     </div>
-                    <figure class="examples__figure-video">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/video_mobile.jpg">
-                            <img class="examples__video" src="../img/video_desktop.jpg" alt="видео ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption-video">
-                            <svg class="examples__svg-video">
-                                <use xlink:href="#video" />
-                            </svg>
-                            смотреть видео
-                        </figcaption>
-                    </figure>
-                    <a href="#" class="examples__more yellow-buttons">Подробнее</a>
-                </div>
-            </li>
-            <li class="examples__item">
-                <div class="examples__before-after">
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/before-6_mobile.jpg">
-                            <img class="examples__img examples__img--first" src="../img/before-6_desktop.jpg"
-                                alt="фото до ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
-                        </figcaption>
-                    </figure>
-                    <figure class="examples__figure">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/after-6_mobile.jpg">
-                            <img class="examples__img" src="../img/after-6_desktop.jpg" alt="фото после ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
-                        </figcaption>
-                    </figure>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-6-1_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-6-1_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-6-2_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-6-2_desktop.jpg" alt="пример работы">
-                    </picture>
-                    <picture>
-                        <source media="(max-width: 1074px)" srcset="../img/examples-6-3_mobile.jpg">
-                        <img class="examples__img" src="../img/examples-6-3_desktop.jpg" alt="пример работы">
-                    </picture>
-                </div>
-                <div class="examples__remont">
-                    <h3 class="examples__title">Ремонт ванной комнаты</h3>
-                    <div class="examples__description">
-                        <div class="examples__area">
-                            <div class="examples__area-number">4,2 м2</div>
-                            <div class="examples__area-description">Площадь санузла</div>
+                    <div class="examples__fourth-box">
+                        <div class="examples__video-box">
+                            <button class="examples__video-button">
+                                смотреть видео
+                            </button>
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/video_mobile.jpg">
+                                <img class="examples__video" src="img/video_desktop.jpg" alt="видео ремонта">
+                            </picture>
                         </div>
-                        <div class="examples__terms">
-                            <div class="examples__terms-days">15 дней</div>
-                            <div class="examples__terms-description">Сроки ремонта</div>
+                        <a href="#" class="examples__more yellow-buttons">Подробнее</a>
+                    </div>
+                </li>
+                <li class="examples__item">
+                    <div class="examples__first-box">
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/before-6_mobile.jpg">
+                                <img class="examples__img examples__img--first" src="img/before-6_desktop.jpg"
+                                    alt="фото до ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--before figcaptions">До
+                            </figcaption>
+                        </figure>
+                        <figure class="examples__figure">
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/after-6_mobile.jpg">
+                                <img class="examples__img" src="img/after-6_desktop.jpg" alt="фото после ремонта">
+                            </picture>
+                            <figcaption class="examples__figcaption examples__figcaption--after figcaptions">После
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="examples__second-box">
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-6-1_mobile.jpg">
+                            <img class="examples__img" src="img/examples-6-1_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-6-2_mobile.jpg">
+                            <img class="examples__img" src="img/examples-6-2_desktop.jpg" alt="пример работы">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 1074px)" srcset="img/examples-6-3_mobile.jpg">
+                            <img class="examples__img" src="img/examples-6-3_desktop.jpg" alt="пример работы">
+                        </picture>
+                    </div>
+                    <div class="examples__third-box">
+                        <h3 class="examples__title">Ремонт ванной комнаты</h3>
+                        <div class="examples__description">
+                            <div class="examples__area">
+                                <div class="examples__area-number">4,2 м2</div>
+                                <div class="examples__area-description">Площадь санузла</div>
+                            </div>
+                            <div class="examples__terms">
+                                <div class="examples__terms-days">15 дней</div>
+                                <div class="examples__terms-description">Сроки ремонта</div>
+                            </div>
                         </div>
                     </div>
-                    <figure class="examples__figure-video">
-                        <picture>
-                            <source media="(max-width: 1074px)" srcset="../img/video_mobile.jpg">
-                            <img class="examples__video" src="../img/video_desktop.jpg" alt="видео ремонта">
-                        </picture>
-                        <figcaption class="examples__figcaption-video">
-                            <svg class="examples__svg-video">
-                                <use xlink:href="#video" />
-                            </svg>
-                            смотреть видео
-                        </figcaption>
-                    </figure>
-                    <a href="#" class="examples__more yellow-buttons">Подробнее</a>
-                </div>
-            </li>
-        </ul>
+                    <div class="examples__fourth-box">
+                        <div class="examples__video-box">
+                            <button class="examples__video-button">
+                                смотреть видео
+                            </button>
+                            <picture>
+                                <source media="(max-width: 1074px)" srcset="img/video_mobile.jpg">
+                                <img class="examples__video" src="img/video_desktop.jpg" alt="видео ремонта">
+                            </picture>
+                        </div>
+                        <a href="#" class="examples__more yellow-buttons">Подробнее</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </section>
     <section class="calculator">
-        <h2 class="calculator__head section-titles">Рассчитайте стоимость ремонта</h2>
+        <div class="container">
+            <h2 class="calculator__head section-titles">Рассчитайте стоимость ремонта</h2>
+        </div>
         <form action="get" class="calculator__form calculator-form">
-            <div class="calculator-form__first-part">
-                <fieldset class="calculator-form__bathroom-type">
-                    <h4 class="calculator-form__title">Тип санузла:</h4>
-                    <ul class="calculator-form__list">
-                        <li class="calculator-form__item"> <input class="visually-hidden calculator-form__input"
-                                type="radio" name="type" value="choice" id="combined" checked>
-                            <label class="calculator-form__label" for="combined">Совмещённый</label>
-                        </li>
-                        <li class="calculator-form__item"><input class="visually-hidden calculator-form__input"
-                                type="radio" name="type" value="choice" id="separate">
-                            <label class="calculator-form__label" for="separate">Раздельный</label>
-                        </li>
-                        <li class="calculator-form__item"><input class="visually-hidden calculator-form__input"
-                                type="radio" name="type" value="choice" id="bathroom">
-                            <label class="calculator-form__label" for="bathroom">Ванная комната</label>
-                        </li>
-                    </ul>
-                    <div class="calculator-form__area-container">
-                        <label class="calculator-form__area" for="bathroom-area">Площадь:</label>
-                        <input class="calculator-form__number" id="bathroom-area" type="number" name="area"
-                            placeholder="12м2">
-                    </div>
-                </fieldset>
-                <fieldset class="calculator-form__materials materials">
-                    <legend class="visually-hidden">Выбор материала</legend>
-                    <div class="materials__container">
-                        <h4 class="materials__head">Материал отделки стен:</h4>
-                        <select class="materials__select" name="materials">
-                            <option>Выберите</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                    <div class="materials__container">
-                        <h4 class="materials__head">Материал отделки пола:</h4>
-                        <select class="materials__select" name="materials">
-                            <option>Выберите</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                    <div class="materials__container">
-                        <h4 class="materials__head">Материал отделки потолка:</h4>
-                        <select class="materials__select" name="materials">
-                            <option>Выберите</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                </fieldset>
-                <fieldset class="calculator-form__additional-services additional-services">
-                    <h4 class="additional-services__title">Дополнительные услуги:</h4>
-                    <ul class="additional-services__list">
-                        <!-- <div class="additional-services__container"> -->
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="installation" checked>
-                            <label class="additional-services__label" for="installation">Подвесной унитаз
-                                (инсталляция)</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="shower">
-                            <label class="additional-services__label" for="shower">Душевая кабина</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="bidet">
-                            <label class="additional-services__label" for="bidet">Гигиенический душ
-                                (биде)</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="construction">
-                            <label class="additional-services__label" for="construction">Конструкция из ГКП
-                                (ниши/полки)</label>
-                        </li>
-                        <!-- </div> -->
-                        <!-- <div class="additional-services__container"> -->
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="warmfloor">
-                            <label class="additional-services__label" for="warmfloor">Теплый пол</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="hatch">
-                            <label class="additional-services__label" for="hatch">Люк “неведимка” под
-                                плитку</label>
-                        </li>
-                        <li class="additional-services__item">
-                            <input class="visually-hidden additional-services__checkbox" type="checkbox" name="addition"
-                                value="choice" id="boiler">
-                            <label class="additional-services__label" for="boiler">Водонагреватель</label>
-                        </li>
-                        <!-- </div> -->
-                    </ul>
-                </fieldset>
-            </div>
-            <div class="calculator-form__second-part">
-                <h3 class="calculator-form__head subtitles">Осталось заполнить форму</h3>
-                <div class="calculator-form__fill-in">
-                    <p class="calculator-form__text">Вы узнаете стоимость ремонта
-                        и получите скидку 10 %</p>
-                    <fieldset class="calculator-form__fieldset">
-                        <label class="visually-hidden calculator-form__label" for="final-name">Имя</label>
-                        <input class="inputs calculator-form__textfield" id="final-name" type="text" name="name"
-                            placeholder="Ваше имя">
-                        <label class="visually-hidden calculator-form__label" for="final-phone">Телефон</label>
-                        <input class="inputs calculator-form__textfield" id="final-phone" type="number" name="phone"
-                            placeholder="+ 7(___)___-__-__">
-                        <button class="calculator-form__submit yellow-buttons" type="submit">Рассчитать
-                            стоимость</button>
+            <div class="container">
+                <div class="calculator-form__first-part">
+                    <fieldset class="calculator-form__bathroom-type">
+                        <h4 class="calculator-form__title">Тип санузла:</h4>
+                        <ul class="calculator-form__list">
+                            <li class="calculator-form__item"> <input class="visually-hidden calculator-form__input"
+                                    type="radio" name="type" value="choice" id="combined" checked>
+                                <label class="calculator-form__label" for="combined">Совмещённый</label>
+                            </li>
+                            <li class="calculator-form__item"><input class="visually-hidden calculator-form__input"
+                                    type="radio" name="type" value="choice" id="separate">
+                                <label class="calculator-form__label" for="separate">Раздельный</label>
+                            </li>
+                            <li class="calculator-form__item"><input class="visually-hidden calculator-form__input"
+                                    type="radio" name="type" value="choice" id="bathroom">
+                                <label class="calculator-form__label" for="bathroom">Ванная комната</label>
+                            </li>
+                        </ul>
+                        <div class="calculator-form__area-container">
+                            <label class="calculator-form__area" for="bathroom-area">Площадь:</label>
+                            <input class="calculator-form__number" id="bathroom-area" type="number" name="area"
+                                placeholder="12м2">
+                            <div class="calculator-form__buttons">
+                                <button class="calculator-form__button"><svg
+                                        class="calculator-form__icon calculator-form__icon--up">
+                                        <use xlink:href="#down" />
+                                    </svg></button>
+                                <button class="calculator-form__button"><svg class="calculator-form__icon">
+                                        <use xlink:href="#down" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="calculator-form__materials materials">
+                        <legend class="visually-hidden">Выбор материала</legend>
+                        <div class="materials__select" id="select-1">
+                            <h4 class="materials__head">Материал отделки стен:</h4>
+                            <button type="button" class="materials__toggle" name="material" value=""
+                                data-select="toggle" data-index="-1">Выберите</button>
+                            <div class="materials__dropdown">
+                                <ul class="materials__options">
+                                    <li class="materials__option" data-select="option" data-value="tile" data-index="0">
+                                        Плитка</li>
+                                    <li class="materials__option" data-select="option" data-value="porcelain-stoneware"
+                                        data-index="1">Керамогранит</li>
+                                    <li class="materials__option" data-select="option" data-value="mosaic"
+                                        data-index="2">Мозаика</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="materials__select" id="select-1">
+                            <h4 class="materials__head">Материал отделки пола:</h4>
+                            <button type="button" class="materials__toggle" name="material" value=""
+                                data-select="toggle" data-index="-1">Выберите</button>
+                            <div class="materials__dropdown">
+                                <ul class="materials__options">
+                                    <li class="materials__option" data-select="option" data-value="tile" data-index="0">
+                                        Плитка</li>
+                                    <li class="materials__option" data-select="option" data-value="porcelain-stoneware"
+                                        data-index="1">Керамогранит</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="materials__select" id="select-1">
+                            <h4 class="materials__head">Материал отделки потолка:</h4>
+                            <button type="button" class="materials__toggle __active" name="material" value=""
+                                data-select="toggle" data-index="-1">Выберите</button>
+                            <div class="materials__dropdown">
+                                <ul class="materials__options">
+                                    <li class="materials__option" data-select="option" data-value="tile" data-index="0">
+                                        Натяжной потолок</li>
+                                    <li class="materials__option" data-select="option" data-value="porcelain-stoneware"
+                                        data-index="1">Реечный потолок</li>
+                                    <li class="materials__option" data-select="option" data-value="mosaic"
+                                        data-index="2">Панель ПВХ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="calculator-form__additional-services additional-services">
+                        <h4 class="additional-services__title">Дополнительные услуги:</h4>
+                        <ul class="additional-services__list">
+                            <!-- <div class="additional-services__container"> -->
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="installation" checked>
+                                <label class="additional-services__label" for="installation">Подвесной унитаз
+                                    (инсталляция)</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="shower">
+                                <label class="additional-services__label" for="shower">Душевая кабина</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="bidet">
+                                <label class="additional-services__label" for="bidet">Гигиенический душ
+                                    (биде)</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="construction">
+                                <label class="additional-services__label" for="construction">Конструкция из ГКП
+                                    (ниши/полки)</label>
+                            </li>
+                            <!-- </div> -->
+                            <!-- <div class="additional-services__container"> -->
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="warmfloor">
+                                <label class="additional-services__label" for="warmfloor">Теплый пол</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="hatch">
+                                <label class="additional-services__label" for="hatch">Люк “неведимка” под
+                                    плитку</label>
+                            </li>
+                            <li class="additional-services__item">
+                                <input class="visually-hidden additional-services__checkbox" type="checkbox"
+                                    name="addition" value="choice" id="boiler">
+                                <label class="additional-services__label" for="boiler">Водонагреватель</label>
+                            </li>
+                            <!-- </div> -->
+                        </ul>
                     </fieldset>
                 </div>
             </div>
+            <div class="calculator-form__second-part">
+                <div class="calculator-form__container container">
+                    <!-- <div class="container"> -->
+                    <h3 class="calculator-form__head subtitles">Осталось заполнить форму</h3>
+                    <!-- </div> -->
+                    <div class="calculator-form__fill-in">
+                        <!-- <div class="container"> -->
+                        <p class="calculator-form__text">Вы узнаете стоимость ремонта
+                            и получите скидку 10 %</p>
+                        <!-- </div> -->
+                        <!-- <div class="calculator-form__container container"> -->
+                        <fieldset class="calculator-form__fieldset">
+                            <label class="visually-hidden calculator-form__label" for="final-name">Имя</label>
+                            <input class="inputs calculator-form__textfield" id="final-name" type="text" name="name"
+                                placeholder="Ваше имя">
+                            <label class="visually-hidden calculator-form__label" for="final-phone">Телефон</label>
+                            <input class="inputs calculator-form__textfield" id="final-phone" type="number" name="phone"
+                                placeholder="+ 7(___)___-__-__">
+                            <button class="calculator-form__submit yellow-buttons" type="submit">Рассчитать
+                                стоимость</button>
+                        </fieldset>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
         </form>
+        <!-- </div> -->
     </section>
     <section class="price">
-        <h2 class="price__head section-titles">цены на услуги по ремонту ванной комнаты</h2>
-        <div class="price__table">
-            <div class="price__column">
-                <h3 class="price__title subtitles">Отделка стен</h3>
-                <div class="price__service-price">
-                    <p class="price__service">Шпатлевка стен</p>
-                    <p class="price__price">от 200р. кв.м</p>
-                    <p class="price__service">Облицовка стен мозаикой</p>
-                    <p class="price__price">от 800р. кв.м</p>
-                    <p class="price__service">Укладка плитки на стены</p>
-                    <p class="price__price">от 450р. кв.м</p>
-                    <p class="price__service">Декоративная штукатурка</p>
-                    <p class="price__price">от 400р. кв.м</p>
-                    <p class="price__service">Покраска стен</p>
-                    <p class="price__price">от 200р. кв.м</p>
-                    <p class="price__service">Штукатурка стен</p>
-                    <p class="price__price">от 300р. кв.м</p>
+        <div class="container">
+            <h2 class="price__head section-titles">Цены на услуги по ремонту ванной комнаты</h2>
+            <div class="price__table">
+                <div class="price__column">
+                    <h3 class="price__title subtitles">Отделка стен</h3>
+                    <div class="price__service-price">
+                        <p class="price__service">Шпатлевка стен</p>
+                        <p class="price__price">от 200р. кв.м</p>
+                        <p class="price__service">Облицовка стен мозаикой</p>
+                        <p class="price__price">от 800р. кв.м</p>
+                        <p class="price__service">Укладка плитки на стены</p>
+                        <p class="price__price">от 450р. кв.м</p>
+                        <p class="price__service">Декоративная штукатурка</p>
+                        <p class="price__price">от 400р. кв.м</p>
+                        <p class="price__service">Покраска стен</p>
+                        <p class="price__price">от 200р. кв.м</p>
+                        <p class="price__service">Штукатурка стен</p>
+                        <p class="price__price">от 300р. кв.м</p>
+                    </div>
+                </div>
+                <div class="price__column">
+                    <h3 class="price__title subtitles">Штукатурка стен</h3>
+                    <div class="price__service-price">
+                        <p class="price__service">Утепление пола</p>
+                        <p class="price__price">от 300р. кв.м</p>
+                        <p class="price__service">Укладка керамогранита</p>
+                        <p class="price__price">от 550р. кв.м</p>
+                        <p class="price__service">Облицовка природным камнем</p>
+                        <p class="price__price">от 900р. кв.м</p>
+                        <p class="price__service">Укладка плитки на пол</p>
+                        <p class="price__price">от 450р. кв.м</p>
+                        <p class="price__service">Стяжка пола</p>
+                        <p class="price__price">от 350р. кв.м</p>
+                        <p class="price__service">Гидроизоляция пола</p>
+                        <p class="price__price">от 100р. кв.м</p>
+                    </div>
+                </div>
+                <div class="price__column">
+                    <h3 class="price__title subtitles">Отделка потолка</h3>
+                    <div class="price__service-price">
+                        <p class="price__service">Окрашивание потолка</p>
+                        <p class="price__price">от 180р. кв.м</p>
+                        <p class="price__service">Натяжной потолок</p>
+                        <p class="price__price">от 250р. кв.м</p>
+                        <p class="price__service">Реечный потолок</p>
+                        <p class="price__price">от 300р. кв.м</p>
+                        <p class="price__service">Реечный протокол</p>
+                        <p class="price__price">от 360р. кв.м</p>
+                        <p class="price__service">Шпатлевка потолка</p>
+                        <p class="price__price">от 230р. кв.м</p>
+                        <p class="price__service">Штукатурка потолка</p>
+                        <p class="price__price">от 500р. кв.м</p>
+                        <p class="price__service">Шумоизоляция потолка</p>
+                        <p class="price__price">от 300р. кв.м</p>
+                    </div>
+                </div>
+                <div class="price__column">
+                    <h3 class="price__title subtitles">Сантехника/электрика</h3>
+                    <div class="price__service-price">
+                        <p class="price__service">Установка смесителя</p>
+                        <p class="price__price">от 500р. кв.м</p>
+                        <p class="price__service">Установка раковины</p>
+                        <p class="price__price">от 1000р. кв.м</p>
+                        <p class="price__service">Установка полотенцесушителя</p>
+                        <p class="price__price">от 1000р. кв.м</p>
+                        <p class="price__service">Установка унитаза</p>
+                        <p class="price__price">от 1200р. кв.м</p>
+                        <p class="price__service">Установка ванны</p>
+                        <p class="price__price">от 1500р. кв.м</p>
+                        <p class="price__service">Установка душевой кабины</p>
+                        <p class="price__price">от 3000р. кв.м</p>
+                        <p class="price__service">Установка стиральной машины</p>
+                        <p class="price__price">от 700р. кв.м</p>
+                    </div>
                 </div>
             </div>
-            <div class="price__column">
-                <h3 class="price__title subtitles">Штукатурка стен</h3>
-                <div class="price__service-price">
-                    <p class="price__service">Утепление пола</p>
-                    <p class="price__price">от 300р. кв.м</p>
-                    <p class="price__service">Укладка керамогранита</p>
-                    <p class="price__price">от 550р. кв.м</p>
-                    <p class="price__service">Облицовка природным камнем</p>
-                    <p class="price__price">от 900р. кв.м</p>
-                    <p class="price__service">Укладка плитки на пол</p>
-                    <p class="price__price">от 450р. кв.м</p>
-                    <p class="price__service">Стяжка пола</p>
-                    <p class="price__price">от 350р. кв.м</p>
-                    <p class="price__service">Гидроизоляция пола</p>
-                    <p class="price__price">от 100р. кв.м</p>
-                </div>
+            <div class="price__pagination">
+                <button class="price__toggle __active">
+                </button>
+                <button class="price__toggle">
+                </button>
+                <button class="price__toggle">
+                </button>
+                <button class="price__toggle">
+                </button>
             </div>
-            <div class="price__column">
-                <h3 class="price__title subtitles">Отделка потолка</h3>
-                <div class="price__service-price">
-                    <p class="price__service">Окрашивание потолка</p>
-                    <p class="price__price">от 180р. кв.м</p>
-                    <p class="price__service">Натяжной потолок</p>
-                    <p class="price__price">от 250р. кв.м</p>
-                    <p class="price__service">Реечный потолок</p>
-                    <p class="price__price">от 300р. кв.м</p>
-                    <p class="price__service">Реечный протокол</p>
-                    <p class="price__price">от 360р. кв.м</p>
-                    <p class="price__service">Шпатлевка потолка</p>
-                    <p class="price__price">от 230р. кв.м</p>
-                    <p class="price__service">Штукатурка потолка</p>
-                    <p class="price__price">от 500р. кв.м</p>
-                    <p class="price__service">Шумоизоляция потолка</p>
-                    <p class="price__price">от 300р. кв.м</p>
-                </div>
-            </div>
-            <div class="price__column">
-                <h3 class="price__title subtitles">Сантехника/электрика</h3>
-                <div class="price__service-price">
-                    <p class="price__service">Установка смесителя</p>
-                    <p class="price__price">от 500р. кв.м</p>
-                    <p class="price__service">Установка раковины</p>
-                    <p class="price__price">от 1000р. кв.м</p>
-                    <p class="price__service">Установка полотенцесушителя</p>
-                    <p class="price__price">от 1000р. кв.м</p>
-                    <p class="price__service">Установка унитаза</p>
-                    <p class="price__price">от 1200р. кв.м</p>
-                    <p class="price__service">Установка ванны</p>
-                    <p class="price__price">от 1500р. кв.м</p>
-                    <p class="price__service">Установка душевой кабины</p>
-                    <p class="price__price">от 3000р. кв.м</p>
-                    <p class="price__service">Установка стиральной машины</p>
-                    <p class="price__price">от 700р. кв.м</p>
-                </div>
-            </div>
-        </div>
-        <div class="price__pagination">
-            <button class="price__toggle __active">
-            </button>
-            <button class="price__toggle">
-            </button>
-            <button class="price__toggle">
-            </button>
-            <button class="price__toggle">
-            </button>
         </div>
     </section>
     <section class="description">
-        <h2 class="description__head section-titles">Ремонт ванных комнат в Санкт-Петербурге</h2>
-        <p class="description__text"> Ремонт ванной под ключ в Санкт-Петербурге. Ванная комната - одно из
-            необходимых и
-            посещаемых мест в нашем доме. Утром, вставая с постели, мы направляемся в ванную
-        <div class="description__rest"> комнату для того, чтобы
-            окончательно пробудиться ото сна, там же, после тяжелого трудового дня мы подготавливаемся к вечернему
-            отдыху.
-            И, несомненно, каждый мечтает о том, чтобы это место релаксации дарило ощущение комфорта и уюта.
-            Немаловажен
-            и тот момент, что когда приходят гости, они, чаще всего первым делом идут в ванную
-            и ее внешний вид во многом определяет впечатление о хозяевах.
-            <p class="description__text">Надежная, шикарная, удобная ванная - результат профессионального ремонта.
-                Наша
-                компания специализируется
-                на ремонте ванных комнат в городе Санкт-Петербурге. Главная задача наших
-                мастеров - выполнить такой ремонт ванной, который долгие годы будет радовать всю Вашу семью,
-                а гости и соседи будут в восторге.</p>
-            <p class="description__text">
-                Основные виды работ, выполняемые нами при отделке ванной комнаты: замена старой, приевшейся
-                сантехники,
-                на новую; замена старых электропроводов; гидроизоляция пола и стен ванной комнаты; выравнивание
-                стен;
-                монтаж
-                потолка и установка системы освещения; укладка плитки; установка необходимых сантехнических
-                приборов.
-            </p>
-            <p class="description__text">
-                Каждый этап работы согласовывается с заказчиком, берутся во внимание все его пожелания. цены наших
-                услуг
-                намного ниже цен конкурирующих фирм, при этом качество выполнения ремонта остается на высшем уровне.
-                Предлагаем нашим заказчикам лучший по всему городу сервис обслуживания.</p>
-            <p class="description__text">
-                Уже приняли решение о ремонте ванной комнаты в Санкт-Петербурге? Звоните нам! Будем рады
-                предоставить
-                исчерпывающие ответы на все Ваши вопросы.</p>
+        <div class="container">
+            <h2 class="description__head section-titles">Ремонт ванных комнат в Санкт-Петербурге</h2>
+            <div class="description__box">
+                <p class="description__text"> Ремонт ванной под ключ в Санкт-Петербурге. Ванная комната - одно из
+                    необходимых и
+                    посещаемых мест в нашем доме. Утром, вставая с постели, мы направляемся в ванную комнату для того,
+                    чтобы
+                    окончательно пробудиться ото сна, там же, после тяжелого трудового дня мы подготавливаемся к
+                    вечернему
+                    отдыху.
+                    И, несомненно, каждый мечтает о том, чтобы это место релаксации дарило ощущение комфорта и уюта.
+                    Немаловажен
+                    и тот момент, что когда приходят гости, они, чаще всего первым делом идут в ванную
+                    и ее внешний вид во многом определяет впечатление о хозяевах.
+                <p class="description__text">Надежная, шикарная, удобная ванная - результат профессионального ремонта.
+                    Наша
+                    компания специализируется
+                    на ремонте ванных комнат в городе Санкт-Петербурге. Главная задача наших
+                    мастеров - выполнить такой ремонт ванной, который долгие годы будет радовать всю Вашу семью,
+                    а гости и соседи будут в восторге.</p>
+                <p class="description__text">
+                    Основные виды работ, выполняемые нами при отделке ванной комнаты: замена старой, приевшейся
+                    сантехники,
+                    на новую; замена старых электропроводов; гидроизоляция пола и стен ванной комнаты; выравнивание
+                    стен;
+                    монтаж
+                    потолка и установка системы освещения; укладка плитки; установка необходимых сантехнических
+                    приборов.
+                </p>
+                <p class="description__text">
+                    Каждый этап работы согласовывается с заказчиком, берутся во внимание все его пожелания. цены наших
+                    услуг
+                    намного ниже цен конкурирующих фирм, при этом качество выполнения ремонта остается на высшем уровне.
+                    Предлагаем нашим заказчикам лучший по всему городу сервис обслуживания.</p>
+                <p class="description__text">
+                    Уже приняли решение о ремонте ванной комнаты в Санкт-Петербурге? Звоните нам! Будем рады
+                    предоставить
+                    исчерпывающие ответы на все Ваши вопросы.</p>
+            </div>
+            <div class="description__show-more"><a href="#"> <svg class="description__icon">
+                        <use xlink:href="#show-more" />
+                    </svg></a></div>
         </div>
     </section>
     <section class="opinions">
-        <h2 class="opinions__head section-titles">Отзывы</h2>
-        <div class="opinions__slider">
-            <figure class="opinions__figure">
-                <picture>
-                    <source media="(max-width: 1074px)" srcset="../img/opinions_mobile.jpg">
-                    <img src="../img/opinions_desktop.jpg" alt="фото ремонта">
-                </picture>
-                <figcaption class="opinions__figcaption opinions__figcaption--before figcaptions">От Марии Романовны
-                </figcaption>
-            </figure>
-            <button class="opinions__arrows">
-                <svg class="opinions__arrow">
-                    <use xlink:href="#arrow" />
-                </svg>
-            </button>
-            <figure class="opinions__figure">
-                <picture>
-                    <source media="(max-width: 1074px)" srcset="../img/opinions_mobile.jpg">
-                    <img src="../img/opinions_desktop.jpg" alt="фото ремонта">
-                </picture>
-                <figcaption class="opinions__figcaption opinions__figcaption--before figcaptions">От Николая
-                    Петровича
-                </figcaption>
-            </figure>
-            <button class="opinions__arrows">
-                <svg class="opinions__arrow opinions__arrow--reverse">
-                    <use xlink:href="#arrow" />
-                </svg>
-            </button>
-            <figure class="opinions__figure">
-                <picture>
-                    <source media="(max-width: 1074px)" srcset="../img/opinions_mobile.jpg">
-                    <img src="../img/opinions_desktop.jpg" alt="фото ремонта">
-                </picture>
-                <figcaption class="opinions__figcaption figcaptions">От Нины
-                    Семеновны
-                </figcaption>
-            </figure>
-        </div>
-        <div class="opinions__pagination">
-            <button class="opinions__toggle">
-            </button>
-            <button class="opinions__toggle __active">
-            </button>
-            <button class="opinions__toggle">
-            </button>
-            <button class="opinions__toggle">
-            </button>
-            <button class="opinions__toggle">
-            </button>
-            <button class="opinions__toggle">
-            </button>
+        <div class=" opinions__container container">
+            <h2 class="opinions__head section-titles">Отзывы</h2>
+            <div class="opinions__slider">
+                <figure class="opinions__figure">
+                    <picture>
+                        <source media="(max-width: 1074px)" srcset="img/opinions_mobile.jpg">
+                        <img src="img/opinions_desktop.jpg" alt="фото ремонта">
+                    </picture>
+                    <figcaption class="opinions__figcaption opinions__figcaption--before figcaptions">От Марии Романовны
+                    </figcaption>
+                </figure>
+                <button class="opinions__arrows">
+                    <svg class="opinions__arrow">
+                        <use xlink:href="#arrow" />
+                    </svg>
+                </button>
+                <figure class="opinions__figure">
+                    <picture>
+                        <source media="(max-width: 1074px)" srcset="img/opinions_mobile.jpg">
+                        <img class="opinions__image __active" src="img/opinions_desktop.jpg" alt="фото ремонта">
+                    </picture>
+                    <figcaption class="opinions__figcaption opinions__figcaption--before figcaptions __active">От
+                        Николая
+                        Петровича
+                    </figcaption>
+                </figure>
+                <button class="opinions__arrows">
+                    <svg class="opinions__arrow opinions__arrow--reverse">
+                        <use xlink:href="#arrow" />
+                    </svg>
+                </button>
+                <figure class="opinions__figure">
+                    <picture>
+                        <source media="(max-width: 1074px)" srcset="img/opinions_mobile.jpg">
+                        <img src="img/opinions_desktop.jpg" alt="фото ремонта">
+                    </picture>
+                    <figcaption class="opinions__figcaption figcaptions">От Нины
+                        Семеновны
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="opinions__pagination">
+                <button class="opinions__toggle">
+                </button>
+                <button class="opinions__toggle __active">
+                </button>
+                <button class="opinions__toggle">
+                </button>
+                <button class="opinions__toggle">
+                </button>
+                <button class="opinions__toggle">
+                </button>
+                <button class="opinions__toggle">
+                </button>
+            </div>
         </div>
     </section>
     <section class="call">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form action="get" class="call__form call-form">
-            <h3 class="call-form__head subtitles">Вызвать замерщика <span class="call-form__head--free">бесплатно</span>
-            </h3>
-            <fieldset class="call-form__fieldset">
-                <a class="call-form__phone" href="tel:+7(950)0191919">
-                    <svg class="call-form__phone-icon">
-                        <use xlink:href="#cellphone" />
-                    </svg>
-                    +7(950) 019 - 19 - 19</a>
-                <label class="visually-hidden call-form__label" for="call-phone">Телефон</label>
-                <input class="inputs call-form__textfield" id="call-phone" type="number" name="phone"
-                    placeholder="Ваш номер телефона">
-                <button class="call-form__submit yellow-buttons" type="submit">Вызвать замерщика</button>
-            </fieldset>
-        </form>
+        <div class="container">
+            <h2 class="visually-hidden">Форма обратной связи</h2>
+            <form action="get" class="call__form call-form">
+                <h3 class="call-form__head subtitles">Вызвать замерщика <span
+                        class="call-form__head--free">бесплатно</span>
+                </h3>
+                <fieldset class="call-form__fieldset">
+                    <a class="call-form__phone" href="tel:+7(950)0191919">
+                        <svg class="call-form__phone-icon">
+                            <use xlink:href="#cellphone" />
+                        </svg>
+                        +7(950) 019 - 19 - 19</a>
+                    <label class="visually-hidden call-form__label" for="call-phone">Телефон</label>
+                    <input class="inputs call-form__textfield" id="call-phone" type="number" name="phone"
+                        placeholder="Ваш номер телефона">
+                    <button class="call-form__submit yellow-buttons" type="submit">Вызвать замерщика</button>
+                </fieldset>
+            </form>
+        </div>
     </section>
     <footer class="footer">
-        <a href="#" class="footer__logo">
-            <picture>
-                <source media="(max-width: 1074px)" srcset="../img/footer__logo-mobile.svg">
-                <img src="../img/footer__logo.svg" alt="логотип">
-            </picture>
-        </a>
-        <div class="footer__flex">
-            <h4 class="footer__title">главная</h4>
-            <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link" href="#">Ремонт ванных комнат</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Наши услуги</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Фото работ</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">Видео работ</a></li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">помощь</h4>
-            <ul class="footer__list">
-                <li class="footer__item"><a class="footer__link" href="#">цены</a></li>
-                <li class="footer__item"><a class="footer__link" href="#">бесплатный замер</a></li>
-                <li class="footer__item"><a class="footer__link" href="contacts.html">контакты</a></li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">наш адрес</h4>
-            <ul class="footer__list footer__list--address">
-                <li class="footer__item footer__item--address">Ремонт санузлов в Санкт-Петербурге</li>
-                <li class="footer__item footer__item--address">08.00 - 20.00 Без выходных</li>
-            </ul>
-        </div>
-        <div class="footer__flex">
-            <h4 class="footer__title">мы в соцсетях</h4>
-            <ul class="footer__media-list">
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
-                            <use xlink:href="#whatsapp" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
-                            <use xlink:href="#vk" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
-                            <use xlink:href="#fb" />
-                        </svg></a></li>
-                <li class="footer__media-item"><a href="#" class="footer__media-link"><svg class="footer__media-icon">
-                            <use xlink:href="#instagram" />
-                        </svg></a></li>
-            </ul>
+        <div class="footer__container container">
+            <a href="#" class="footer__logo">
+                <picture>
+                    <source media="(max-width: 1074px)" srcset="img/footer__logo-mobile.svg">
+                    <img src="img/footer__logo.svg" alt="логотип">
+                </picture>
+            </a>
+            <dl class="footer__list">
+                <dt class="footer__term">главная</dt>
+                <dd class="footer__item"><a class="footer__link" href="#">Ремонт ванных комнат</a></dd>
+                <dd class="footer__item"><a class="footer__link" href="#">Наши услуги</a></dd>
+                <dd class="footer__item"><a class="footer__link" href="#">Фото работ</a></dd>
+                <dd class="footer__item"><a class="footer__link" href="#">Видео работ</a></dd>
+            </dl>
+            <dl class="footer__list">
+                <dt class="footer__term">помощь</dt>
+                <dd class="footer__item"><a class="footer__link" href="#">цены</a></dd>
+                <dd class="footer__item"><a class="footer__link" href="#">бесплатный замер</a></dd>
+                <dd class="footer__item"><a class="footer__link" href="contacts.html">контакты</a></dd>
+            </dl>
+            <div class="footer__show-list show-help"><a href="#"> <svg class="show-help__icon">
+                        <use xlink:href="#show-help" />
+                    </svg></a></div>
+            <dl class="footer__list">
+                <dt class="footer__term">наш адрес</dt>
+                <dd class="footer__item footer__item--lowercase">Ремонт санузлов в Санкт-Петербурге</dd>
+                <dd class="footer__item footer__item--lowercase">08.00 - 20.00 Без выходных</dd>
+            </dl>
+            <dl class="footer__list footer__list--social social">
+                <dt class="footer__term footer__term--none">мы в соцсетях</dt>
+                <div class="social__container">
+                    <dd class="footer__item footer__item--social"><a href="#" class="footer__media-link"><svg
+                                class="footer__media-icon">
+                                <use xlink:href="#whatsapp" />
+                            </svg></a></dd>
+                    <dd class="footer__item footer__item--social"><a href="#" class="footer__media-link"><svg
+                                class="footer__media-icon">
+                                <use xlink:href="#vk" />
+                            </svg></a></dd>
+                    <dd class="footer__item footer__item--social"><a href="#" class="footer__media-link"><svg
+                                class="footer__media-icon">
+                                <use xlink:href="#fb" />
+                            </svg></a></dd>
+                    <dd class="footer__item footer__item--social"><a href="#" class="footer__media-link"><svg
+                                class="footer__media-icon">
+                                <use xlink:href="#instagram" />
+                            </svg></a></dd>
+                </div>
+            </dl>
         </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

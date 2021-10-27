@@ -1,5 +1,5 @@
 .price {
-    padding: 0 215px 110px 215px;
+    padding: 0 215px 140px 215px;
 
     @include tablet {
         padding: 0 15px 80px 15px;
@@ -25,14 +25,14 @@
 .price__head::before {
     position: absolute;
     content: "";
-    background: url("../../img/rouble.svg") no-repeat 0 0;
+    background: url("../img/rouble.svg") no-repeat 0 0;
     width: 272px;
     height: 297px;
     top: -65px;
     left: -130px;
 
     @include tablet {
-        background: url("../../img/rouble_mobile.svg") no-repeat 0 0;
+        background: url("../img/rouble_mobile.svg") no-repeat 0 0;
         width: 122px;
         height: 133px;
         top: -26px;
@@ -73,11 +73,14 @@
 }
 
 .price__pagination {
-    width: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 128px 0 125px;
+    display: none;
+    @include tablet {
+        width: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 128px 0 125px;
+    }
 }
 
 .price__toggle {
@@ -87,7 +90,7 @@
     background-color: $cream-6;
     border: none;
 
-    .__active {
+    &.__active {
         background-color: $brown-4;
     }
 }

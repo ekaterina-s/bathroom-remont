@@ -6,11 +6,15 @@
     }
 }
 
+.opinions__container {
+    max-width: 1497px;
+}
+
 .opinions__head {
     padding: 0;
     padding-bottom: 12px;
     margin: 0;
-    margin-bottom: 120px;
+    margin-bottom: 126px;
     text-align: center;
     border-bottom: 1px solid $brown-3;
 
@@ -21,8 +25,7 @@
 }
 
 .opinions__slider {
-    padding: 0 51px;
-    margin-bottom: 169px;
+    margin-bottom: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,9 +37,18 @@
     }
 }
 
+.opinions__image {
+    &.__active {
+        width: 472px;
+        height: 346px;
+    }
+}
+
 .opinions__figure:first-child,
 .opinions__figure:last-child {
-    display: none;
+    @include tablet {
+        display: none;
+    }
 }
 
 .opinions__figure {
@@ -56,6 +68,11 @@
         width: 246px;
         height: 53px;
         font: 13px/20px $third-font;
+    }
+
+    &.__active {
+        width: 472px;
+        top: 346px;
     }
 }
 
@@ -83,8 +100,8 @@
     position: absolute;
     width: 15px;
     height: 37px;
-    top: 183px;
-    left: 522px;
+    top: 181px;
+    left: 469px;
 
     @include tablet {
         width: 8px;
@@ -102,7 +119,7 @@
 
 .opinions__arrow--reverse {
     transform: rotate(180deg);
-    left: 1064px;
+    left: 1014px;
 
     @include tablet {
         left: 297px;
@@ -114,7 +131,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 640px;
+    margin: 0 588px;
 
     @include tablet {
         width: 185px;
@@ -129,7 +146,7 @@
     background-color: $cream-6;
     border: none;
 
-    .__active {
+    &.__active {
         background-color: $brown-4;
     }
 
